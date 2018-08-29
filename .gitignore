@@ -1,2 +1,5 @@
 .cache
 __pycache__
+
+#TODO: modify this line to work for any dataset
+#./datasets/ViolentHumanActions_v0/data/*
