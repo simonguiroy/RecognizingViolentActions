@@ -5,7 +5,7 @@ import numpy as np
 from numpy import genfromtxt
 from torch.utils.data import Dataset
 import time
-from datasets.preprocessing import preprocess_rgb, preprocess_flow
+from preprocessing import preprocess_rgb, preprocess_flow
 from torch.utils.data import DataLoader
 
 
@@ -50,11 +50,11 @@ class VideoDataset(Dataset):
     # a DataLoader object 
     def get_labels(self):
         return self.csv_data[:][1]
-        
-        
+                
     def __getitem__(self, idx):
-        video_filename = self.csv_data[idx][0]
+        video_filename = self.csv_data[idx][1]
         label = self.csv_data[idx][1]
+
         sample = {'video': None, 'label': label}
         
         if self.stream == 'rgb':
