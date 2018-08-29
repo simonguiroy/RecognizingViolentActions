@@ -1,14 +1,16 @@
 import argparse
+import os
 import numpy as np
+from datasets.video_dataset import VideoDataset
 import torch
-from models.i3d.i3d import I3D
+from models import *
+import sys
 
-rgb_pt_checkpoint = 'models/i3d/checkpoints/i3d_RGB.pth'
-flow_pt_checkpoint = 'models/i3d/checkpoints/i3d_FLOW.pth'
+#rgb_pt_checkpoint = 'models/i3d/checkpoints/i3d_RGB.pth'
+#flow_pt_checkpoint = 'models/i3d/checkpoints/i3d_FLOW.pth'
 
 
 def run_demo(args):
-    kinetics_classes = [x.strip() for x in open(args.classes_path)]
 
     def get_scores(sample, model):
         sample_var = torch.autograd.Variable(torch.from_numpy(sample).cuda())
@@ -20,29 +22,49 @@ def run_demo(args):
         print(
             'Top {} classes and associated probabilities: '.format(args.top_k))
         for i in range(args.top_k):
-            print('[{}]: {:.6E}'.format(kinetics_classes[top_idx[0, i]],
+            print('[{}]: {:.6E}'.format(action_classes[top_idx[0, i]],
                                         top_val[0, i]))
         return out_logit
 
-    # Rung RGB model
-    if args.rgb:
-        i3d_rgb = I3D(num_classes=400, modality='rgb')
-        i3d_rgb.eval()
-        i3d_rgb.load_state_dict(torch.load(args.rgb_weights_path))
-        i3d_rgb.cuda()
 
-        rgb_sample = np.load(args.rgb_sample_path).transpose(0, 4, 1, 2, 3)
-        out_rgb_logit = get_scores(rgb_sample, i3d_rgb)
+    action_classes = [x.strip() for x in open(args.classes_path)]
 
+    if args.model == 'i3d':
+        model_class = I3D
+    else:
+        pass
+
+    # Run RGB model
+    if args.stream == 'rgb' or args.stream == 'joint':
+        dataset_rgb = VideoDataset(csv_file='datasets/' + args.dataset + '/dataset.csv',
+                               root_dir='datasets/' + args.dataset + '/data/',
+                               stream='rgb')
+        model_rgb = model_class(num_classes=len(action_classes), modality='rgb')
+        model_rgb.eval()
+        model_rgb.load_state_dict(torch.load('models/' + args.model + '/checkpoints/' + args.model + '_RGB.pth'))
+        model_rgb.cuda()
     # Run flow model
-    if args.flow:
-        i3d_flow = I3D(num_classes=400, modality='flow')
-        i3d_flow.eval()
-        i3d_flow.load_state_dict(torch.load(args.flow_weights_path))
-        i3d_flow.cuda()
+    if args.stream == 'flow' or args.stream == 'joint':
+        dataset_flow = VideoDataset(csv_file='datasets/' + args.dataset + '/dataset.csv',
+                               root_dir='datasets/' + args.dataset + '/data/',
+                               stream='flow')
+        model_flow = model_class(num_classes=len(action_classes), modality='flow')
+        model_flow.eval()
+        model_flow.load_state_dict(torch.load('models/' + args.model + '/checkpoints/' + args.model + '_FLOW.pth'))
+        model_flow.cuda()
 
-        flow_sample = np.load(args.flow_sample_path).transpose(0, 4, 1, 2, 3)
-        out_flow_logit = get_scores(flow_sample, i3d_flow)
+    for idx in range(len(dataset)):
+        if args.stream == 'rgb' or args.stream == 'joint':
+            out_var_rgb, out_logit_rgb  = model_rgb( torch.autograd.Variable(torch.from_numpy(dataset_rgb[idx]['video'].transpose(0, 4, 1, 2, 3)).cuda()) )
+            out_tensor_rgb = out_var_rgb.data.cpu()
+
+        if args.stream == 'flow' or args.stream == 'joint':
+            out_var_flow, out_logit_flow  = model_flow( torch.autograd.Variable(torch.from_numpy(dataset_flow[idx]['video'].transpose(0, 4, 1, 2, 3)).cuda()) )
+            out_tensor_rgb = out_var_rgb.data.cpu()
+
+
+
+
 
     # Joint model
     if args.flow and args.rgb:
@@ -55,61 +77,45 @@ def run_demo(args):
         for i in range(args.top_k):
             logit_score = out_logit[0, top_idx[0, i]].data[0]
             print('{:.6e} {:.6e} {}'.format(logit_score, top_val[0, i],
-                                            kinetics_classes[top_idx[0, i]]))
+                                            action_classes[top_idx[0, i]]))
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser('Runs inflated inception v1 network on\
-    cricket sample from tensorflow demo (generate the network weights with\
-    i3d_tf_to_pt.py first)')
-
+    parser = argparse.ArgumentParser('Evaluating the I3D model, and possible variants, on video datasets')
+    # TODO: eventually, we will want to evaluate models on various possible checkpoints, thus add an argument for specific checkpoints
 
     parser.add_argument(
-        '--sample_path', type=str, help='path of video clip sample')
-
-
-    # RGB arguments
-    parser.add_argument(
-        '--rgb', action='store_true', help='Evaluate RGB pretrained network')
-    parser.add_argument(
-        '--rgb_weights_path',
+        '--model',
         type=str,
-        default='model/model_rgb.pth',
-        help='Path to rgb model state_dict')
+        default='i3d',
+        choices=['i3d']
+        help='Model to use')
     parser.add_argument(
-        '--rgb_sample_path',
+        '--stream',
         type=str,
-        default='data/kinetic-samples/punching_person-Kinetics-train-0001-RGB-crop.npy',
-        help='Path to kinetics rgb numpy sample')
-
-    # Flow arguments
+        default='joint',
+        choices=['rgb', 'flow', 'joint']
+        help='Input stream for model')
     parser.add_argument(
-        '--flow', action='store_true', help='Evaluate flow pretrained network')
-    parser.add_argument(
-        '--flow_weights_path',
+        '--pre-trained',
         type=str,
-        default='model/model_flow.pth',
-        help='Path to flow model state_dict')
+        default='both',
+        #choices=['rgb', 'flow', 'both', 'none']
+        # Since this is an evaluation script, we have to load pre-trained weights, but use the line above for a training script
+        choices=['both']
+        help='Whether to use pre-trained weights (from Kinetics-400)')
     parser.add_argument(
-        '--flow_sample_path',
+        '--dataset',
         type=str,
-        default='data/kinetic-samples/punching_person-Kinetics-train-0001-FLOW-crop.npy',
-        help='Path to kinetics flow numpy sample')
-
-    parser.add_argument(
-        '--classes_path',
-        type=str,
-        default='data/kinetic-samples/label_map.txt',
-        help='Number of video_frames to use (should be a multiple of 8)')
+        default='ViolentHumanActions_v0',
+        help='Name of dataset to use',
+        choices=['ViolentHumanActions_v0'])
     parser.add_argument(
         '--top_k',
         type=int,
         default='5',
         help='When display_samples, number of top classes to display')
+
     args = parser.parse_args()
-
-    args.rgb_sample_path = args.sample_path + '-RGB-crop.npy'
-    args.rgb_flow_path = args.sample_path + '-FLOW-crop.npy'
-
-
+    
     run_demo(args)
