@@ -7,9 +7,6 @@ from models import *
 import sys
 import gc
 
-#rgb_pt_checkpoint = 'models/i3d/checkpoints/i3d_RGB.pth'
-#flow_pt_checkpoint = 'models/i3d/checkpoints/i3d_FLOW.pth'
-
 """
     def get_scores(sample, model):
         sample_var = torch.autograd.Variable(torch.from_numpy(sample).cuda())
@@ -64,11 +61,9 @@ def run_demo(args):
         model.load_state_dict(torch.load('models/' + args.model + '/checkpoints/' + args.model + '_RGB.pth'))
         model.cuda()
 
-
         for idx in range(len(dataset)):
-            print ('stream: ' + input_stream + '   idx: ' + str(idx))
+            print ("stream: " + input_stream + "   idx: " + str(idx))
             out_var, out_logit  = model( torch.autograd.Variable(torch.from_numpy(dataset[idx]['video'].transpose(0, 4, 1, 2, 3)).cuda()) )
-
             preds[idx,:,stream_idx] = out_var.data.cpu().numpy()
             if idx % 20 == 0:
                 np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',

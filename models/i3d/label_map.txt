@@ -1,322 +1,322 @@
 abseiling
-air drumming
-answering questions
+air_drumming
+answering_questions
 applauding
-applying cream
+applying_cream
 archery
-arm wrestling
-arranging flowers
-assembling computer
+arm_wrestling
+arranging_flowers
+assembling_computer
 auctioning
-baby waking up
-baking cookies
-balloon blowing
+baby_waking_up
+baking_cookies
+balloon_blowing
 bandaging
 barbequing
 bartending
 beatboxing
-bee keeping
-belly dancing
-bench pressing
-bending back
-bending metal
-biking through snow
-blasting sand
-blowing glass
-blowing leaves
-blowing nose
-blowing out candles
+bee_keeping
+belly_dancing
+bench_pressing
+bending_back
+bending_metal
+biking_through_snow
+blasting_sand
+blowing_glass
+blowing_leaves
+blowing_nose
+blowing_out_candles
 bobsledding
 bookbinding
-bouncing on trampoline
+bouncing_on_trampoline
 bowling
-braiding hair
-breading or breadcrumbing
+braiding_hair
+breading_or_breadcrumbing
 breakdancing
-brush painting
-brushing hair
-brushing teeth
-building cabinet
-building shed
-bungee jumping
+brush_painting
+brushing_hair
+brushing_teeth
+building_cabinet
+building_shed
+bungee_jumping
 busking
-canoeing or kayaking
+canoeing_or_kayaking
 capoeira
-carrying baby
+carrying_baby
 cartwheeling
-carving pumpkin
-catching fish
-catching or throwing baseball
-catching or throwing frisbee
-catching or throwing softball
+carving_pumpkin
+catching_fish
+catching_or_throwing_baseball
+catching_or_throwing_frisbee
+catching_or_throwing_softball
 celebrating
-changing oil
-changing wheel
-checking tires
+changing_oil
+changing_wheel
+checking_tires
 cheerleading
-chopping wood
+chopping_wood
 clapping
-clay pottery making
-clean and jerk
-cleaning floor
-cleaning gutters
-cleaning pool
-cleaning shoes
-cleaning toilet
-cleaning windows
-climbing a rope
-climbing ladder
-climbing tree
-contact juggling
-cooking chicken
-cooking egg
-cooking on campfire
-cooking sausages
-counting money
-country line dancing
-cracking neck
-crawling baby
-crossing river
+clay_pottery_making
+clean_and_jerk
+cleaning_floor
+cleaning_gutters
+cleaning_pool
+cleaning_shoes
+cleaning_toilet
+cleaning_windows
+climbing_a_rope
+climbing_ladder
+climbing_tree
+contact_juggling
+cooking_chicken
+cooking_egg
+cooking_on_campfire
+cooking_sausages
+counting_money
+country_line_dancing
+cracking_neck
+crawling_baby
+crossing_river
 crying
-curling hair
-cutting nails
-cutting pineapple
-cutting watermelon
-dancing ballet
-dancing charleston
-dancing gangnam style
-dancing macarena
+curling_hair
+cutting_nails
+cutting_pineapple
+cutting_watermelon
+dancing_ballet
+dancing_charleston
+dancing_gangnam_style
+dancing_macarena
 deadlifting
-decorating the christmas tree
+decorating_the_christmas_tree
 digging
 dining
-disc golfing
-diving cliff
+disc_golfing
+diving_cliff
 dodgeball
-doing aerobics
-doing laundry
-doing nails
+doing_aerobics
+doing_laundry
+doing_nails
 drawing
-dribbling basketball
+dribbling_basketball
 drinking
-drinking beer
-drinking shots
-driving car
-driving tractor
-drop kicking
-drumming fingers
-dunking basketball
-dying hair
-eating burger
-eating cake
-eating carrots
-eating chips
-eating doughnuts
-eating hotdog
-eating ice cream
-eating spaghetti
-eating watermelon
-egg hunting
-exercising arm
-exercising with an exercise ball
-extinguishing fire
+drinking_beer
+drinking_shots
+driving_car
+driving_tractor
+drop_kicking
+drumming_fingers
+dunking_basketball
+dying_hair
+eating_burger
+eating_cake
+eating_carrots
+eating_chips
+eating_doughnuts
+eating_hotdog
+eating_ice_cream
+eating_spaghetti
+eating_watermelon
+egg_hunting
+exercising_arm
+exercising_with_an_exercise_ball
+extinguishing_fire
 faceplanting
-feeding birds
-feeding fish
-feeding goats
-filling eyebrows
-finger snapping
-fixing hair
-flipping pancake
-flying kite
-folding clothes
-folding napkins
-folding paper
-front raises
-frying vegetables
-garbage collecting
+feeding_birds
+feeding_fish
+feeding_goats
+filling_eyebrows
+finger_snapping
+fixing_hair
+flipping_pancake
+flying_kite
+folding_clothes
+folding_napkins
+folding_paper
+front_raises
+frying_vegetables
+garbage_collecting
 gargling
-getting a haircut
-getting a tattoo
-giving or receiving award
-golf chipping
-golf driving
-golf putting
-grinding meat
-grooming dog
-grooming horse
-gymnastics tumbling
-hammer throw
+getting_a_haircut
+getting_a_tattoo
+giving_or_receiving_award
+golf_chipping
+golf_driving
+golf_putting
+grinding_meat
+grooming_dog
+grooming_horse
+gymnastics_tumbling
+hammer_throw
 headbanging
 headbutting
-high jump
-high kick
-hitting baseball
-hockey stop
-holding snake
+high_jump
+high_kick
+hitting_baseball
+hockey_stop
+holding_snake
 hopscotch
 hoverboarding
 hugging
-hula hooping
+hula_hooping
 hurdling
-hurling (sport)
-ice climbing
-ice fishing
-ice skating
+hurling_sport
+ice_climbing
+ice_fishing
+ice_skating
 ironing
-javelin throw
+javelin_throw
 jetskiing
 jogging
-juggling balls
-juggling fire
-juggling soccer ball
-jumping into pool
-jumpstyle dancing
-kicking field goal
-kicking soccer ball
+juggling_balls
+juggling_fire
+juggling_soccer_ball
+jumping_into_pool
+jumpstyle_dancing
+kicking_field_goal
+kicking_soccer_ball
 kissing
 kitesurfing
 knitting
 krumping
 laughing
-laying bricks
-long jump
+laying_bricks
+long_jump
 lunge
-making a cake
-making a sandwich
-making bed
-making jewelry
-making pizza
-making snowman
-making sushi
-making tea
+making_a_cake
+making_a_sandwich
+making_bed
+making_jewelry
+making_pizza
+making_snowman
+making_sushi
+making_tea
 marching
-massaging back
-massaging feet
-massaging legs
-massaging person's head
-milking cow
-mopping floor
+massaging_back
+massaging_feet
+massaging_legs
+massaging_person's_head
+milking_cow
+mopping_floor
 motorcycling
-moving furniture
-mowing lawn
-news anchoring
-opening bottle
-opening present
+moving_furniture
+mowing_lawn
+news_anchoring
+opening_bottle
+opening_present
 paragliding
 parasailing
 parkour
-passing American football (in game)
-passing American football (not in game)
-peeling apples
-peeling potatoes
-petting animal (not cat)
-petting cat
-picking fruit
-planting trees
+passing_American_football_in_game
+passing_American_football_not_in_game
+peeling_apples
+peeling_potatoes
+petting_animal_not_cat
+petting_cat
+picking_fruit
+planting_trees
 plastering
-playing accordion
-playing badminton
-playing bagpipes
-playing basketball
-playing bass guitar
-playing cards
-playing cello
-playing chess
-playing clarinet
-playing controller
-playing cricket
-playing cymbals
-playing didgeridoo
-playing drums
-playing flute
-playing guitar
-playing harmonica
-playing harp
-playing ice hockey
-playing keyboard
-playing kickball
-playing monopoly
-playing organ
-playing paintball
-playing piano
-playing poker
-playing recorder
-playing saxophone
-playing squash or racquetball
-playing tennis
-playing trombone
-playing trumpet
-playing ukulele
-playing violin
-playing volleyball
-playing xylophone
-pole vault
-presenting weather forecast
-pull ups
-pumping fist
-pumping gas
-punching bag
-punching person (boxing)
-push up
-pushing car
-pushing cart
-pushing wheelchair
-reading book
-reading newspaper
-recording music
-riding a bike
-riding camel
-riding elephant
-riding mechanical bull
-riding mountain bike
-riding mule
-riding or walking with horse
-riding scooter
-riding unicycle
-ripping paper
-robot dancing
-rock climbing
-rock scissors paper
-roller skating
-running on treadmill
+playing_accordion
+playing_badminton
+playing_bagpipes
+playing_basketball
+playing_bass_guitar
+playing_cards
+playing_cello
+playing_chess
+playing_clarinet
+playing_controller
+playing_cricket
+playing_cymbals
+playing_didgeridoo
+playing_drums
+playing_flute
+playing_guitar
+playing_harmonica
+playing_harp
+playing_ice_hockey
+playing_keyboard
+playing_kickball
+playing_monopoly
+playing_organ
+playing_paintball
+playing_piano
+playing_poker
+playing_recorder
+playing_saxophone
+playing_squash_or_racquetball
+playing_tennis
+playing_trombone
+playing_trumpet
+playing_ukulele
+playing_violin
+playing_volleyball
+playing_xylophone
+pole_vault
+presenting_weather_forecast
+pull_ups
+pumping_fist
+pumping_gas
+punching_bag
+punching_person
+push_up
+pushing_car
+pushing_cart
+pushing_wheelchair
+reading_book
+reading_newspaper
+recording_music
+riding_a_bike
+riding_camel
+riding_elephant
+riding_mechanical_bull
+riding_mountain_bike
+riding_mule
+riding_or_walking_with_horse
+riding_scooter
+riding_unicycle
+ripping_paper
+robot_dancing
+rock_climbing
+rock_scissors_paper
+roller_skating
+running_on_treadmill
 sailing
-salsa dancing
-sanding floor
-scrambling eggs
-scuba diving
-setting table
-shaking hands
-shaking head
-sharpening knives
-sharpening pencil
-shaving head
-shaving legs
-shearing sheep
-shining shoes
-shooting basketball
-shooting goal (soccer)
-shot put
-shoveling snow
-shredding paper
-shuffling cards
-side kick
-sign language interpreting
+salsa_dancing
+sanding_floor
+scrambling_eggs
+scuba_diving
+setting_table
+shaking_hands
+shaking_head
+sharpening_knives
+sharpening_pencil
+shaving_head
+shaving_legs
+shearing_sheep
+shining_shoes
+shooting_basketball
+shooting_goal_soccer
+shot_put
+shoveling_snow
+shredding_paper
+shuffling_cards
+side_kick
+sign_language_interpreting
 singing
 situp
 skateboarding
-ski jumping
-skiing (not slalom or crosscountry)
-skiing crosscountry
-skiing slalom
-skipping rope
+ski_jumping
+skiing_not_slalom_or_crosscountry
+skiing_crosscountry
+skiing_slalom
+skipping_rope
 skydiving
 slacklining
 slapping
-sled dog racing
+sled_dog_racing
 smoking
-smoking hookah
-snatch weight lifting
+smoking_hookah
+snatch_weight_lifting
 sneezing
 sniffing
 snorkeling
@@ -324,75 +324,75 @@ snowboarding
 snowkiting
 snowmobiling
 somersaulting
-spinning poi
-spray painting
+spinning_poi
+spray_painting
 spraying
-springboard diving
+springboard_diving
 squat
-sticking tongue out
-stomping grapes
-stretching arm
-stretching leg
-strumming guitar
-surfing crowd
-surfing water
-sweeping floor
-swimming backstroke
-swimming breast stroke
-swimming butterfly stroke
-swing dancing
-swinging legs
-swinging on something
-sword fighting
-tai chi
-taking a shower
-tango dancing
-tap dancing
-tapping guitar
-tapping pen
-tasting beer
-tasting food
+sticking_tongue_out
+stomping_grapes
+stretching_arm
+stretching_leg
+strumming_guitar
+surfing_crowd
+surfing_water
+sweeping_floor
+swimming_backstroke
+swimming_breast_stroke
+swimming_butterfly_stroke
+swing_dancing
+swinging_legs
+swinging_on_something
+sword_fighting
+tai_chi
+taking_a_shower
+tango_dancing
+tap_dancing
+tapping_guitar
+tapping_pen
+tasting_beer
+tasting_food
 testifying
 texting
-throwing axe
-throwing ball
-throwing discus
+throwing_axe
+throwing_ball
+throwing_discus
 tickling
 tobogganing
-tossing coin
-tossing salad
-training dog
+tossing_coin
+tossing_salad
+training_dog
 trapezing
-trimming or shaving beard
-trimming trees
-triple jump
-tying bow tie
-tying knot (not on a tie)
-tying tie
+trimming_or_shaving_beard
+trimming_trees
+triple_jump
+tying_bow_tie
+tying_knot_not_on_a_tie
+tying_tie
 unboxing
-unloading truck
-using computer
-using remote controller (not gaming)
-using segway
+unloading_truck
+using_computer
+using_remote_controller_not_gaming
+using_segway
 vault
-waiting in line
-walking the dog
-washing dishes
-washing feet
-washing hair
-washing hands
-water skiing
-water sliding
-watering plants
-waxing back
-waxing chest
-waxing eyebrows
-waxing legs
-weaving basket
+waiting_in_line
+walking_the_dog
+washing_dishes
+washing_feet
+washing_hair
+washing_hands
+water_skiing
+water_sliding
+watering_plants
+waxing_back
+waxing_chest
+waxing_eyebrows
+waxing_legs
+weaving_basket
 welding
 whistling
 windsurfing
-wrapping present
+wrapping_present
 wrestling
 writing
 yawning

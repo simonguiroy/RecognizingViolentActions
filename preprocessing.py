@@ -36,7 +36,7 @@ def preprocess_rgb(file_path):
 
     ret = True
     #using 0-based index of the frame to be decoded/captured next
-    while(cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count/2 and ret == True):
+    while(cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count and ret == True):
         ret, frame = cap.read()            
         if ret == True:
             #Resizing frame with bilinear interpolation

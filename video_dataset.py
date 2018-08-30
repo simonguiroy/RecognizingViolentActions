@@ -49,7 +49,7 @@ class VideoDataset(Dataset):
     # will need to make the __getitem__() function coherent with this function and eventually with the use
     # a DataLoader object 
     def get_labels(self):
-        return self.csv_data[:][1]
+        return self.csv_data[:,0]
                 
     def __getitem__(self, idx):
         video_filename = self.csv_data[idx][1]
