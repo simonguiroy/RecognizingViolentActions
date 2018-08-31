@@ -58,13 +58,18 @@ def run_demo(args):
                                stream=input_stream)
         model = model_class(num_classes=len(action_classes), modality=input_stream)
         model.eval()
-        model.load_state_dict(torch.load('models/' + args.model + '/checkpoints/' + args.model + '_RGB.pth'))
+        model.load_state_dict(torch.load('models/' + args.model + '/checkpoints/' + args.model + '_' + input_stream + '.pth'))
         model.cuda()
 
         for idx in range(len(dataset)):
+            idx += 90
             print ("stream: " + input_stream + "   idx: " + str(idx))
-            out_var, out_logit  = model( torch.autograd.Variable(torch.from_numpy(dataset[idx]['video'].transpose(0, 4, 1, 2, 3)).cuda()) )
-            preds[idx,:,stream_idx] = out_var.data.cpu().numpy()
+            try:
+                out_var, out_logit  = model( torch.autograd.Variable(torch.from_numpy(dataset[idx]['video'].transpose(0, 4, 1, 2, 3)).cuda()) )
+                preds[idx,:,stream_idx] = out_var.data.cpu().numpy()
+            except:
+                print('error handling video ' + str(idx))
+
             if idx % 20 == 0:
                 np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
                          truth_labels=truth_labels, 
