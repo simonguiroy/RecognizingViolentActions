@@ -1,13 +1,7 @@
 import numpy as np
 
-action_classes = [x.strip() for x in open('label_map.txt')]
-res = np.load('i3d-ViolentHumanActions_v0-joint.npz')
-preds = res['preds']
-truth_labels_txt = res['truth_labels']
-import numpy as np
-
-action_classes = [x.strip() for x in open('label_map.txt')]
-res = np.load('i3d-ViolentHumanActions_v0-joint.npz')
+action_classes = [x.strip() for x in open('models/i3d/label_map.txt')]
+res = np.load('out/i3d/i3d-ViolentHumanActions_v0-joint.npz')
 preds = res['preds']
 truth_labels_txt = res['truth_labels']
 truth_labels = np.zeros([truth_labels_txt.shape[0],1])
@@ -43,3 +37,5 @@ def summary_confmat(conf_mat, truth_labels, k=10):
         sorted_values = np.flip( np.sort(conf_matrix_rgb[x,:])[-10:],0 )
         _summary_confmat.append([action_classes[x], [np.take(action_classes, sorted_args), sorted_values]])
     return _summary_confmat
+
+

@@ -49,7 +49,7 @@ def run_demo(args):
         model.cuda()
 
         #for idx in range(len(dataset)):
-        for idx in range(5):
+        for idx in range(3):
             idx += 95
             print ("stream: " + input_stream + "   idx: " + str(idx))
             try:
@@ -78,7 +78,7 @@ def run_demo(args):
         for idx in range(len(dataset)):
             joint_logits = out_logits[idx][0] + out_logits[idx][1]
             print ( torch.nn.functional.softmax(joint_logits, 1).data.cpu().numpy().shape )
-            preds[idx,:,2] = torch.nn.functional.softmax(joint_logits, 1).data.cpu().numpy().T
+            preds[idx,:,2] = torch.nn.functional.softmax(joint_logits, 1).data.cpu().numpy()
 
         np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
                  truth_labels=truth_labels, 
