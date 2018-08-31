@@ -7,23 +7,6 @@ from models import *
 import sys
 import gc
 
-"""
-    def get_scores(sample, model):
-        sample_var = torch.autograd.Variable(torch.from_numpy(sample).cuda())
-        out_var, out_logit = model(sample_var)
-        out_tensor = out_var.data.cpu()
-
-        top_val, top_idx = torch.sort(out_tensor, 1, descending=True)
-
-        print(
-            'Top {} classes and associated probabilities: '.format(args.top_k))
-        for i in range(args.top_k):
-            print('[{}]: {:.6E}'.format(action_classes[top_idx[0, i]],
-                                        top_val[0, i]))
-        return out_logit
-"""
-
-
 def run_demo(args):
     action_classes = [x.strip() for x in open('models/' + args.model + '/label_map.txt')]
     num_samples = len(VideoDataset(csv_file='datasets/' + args.dataset + '/dataset.csv',
@@ -35,13 +18,17 @@ def run_demo(args):
         pass
 
     if args.stream == 'rgb':
-        streams = ['rgb'] 
+        streams = ['rgb']
+        num_preds_out_channels = 1 
     elif args.stream == 'flow':
         streams = ['flow'] 
+        num_preds_out_channels = 1 
     else:
         streams = ['rgb', 'flow']
+        num_preds_out_channels = 3 
+        out_logits = [[None,None]] * num_samples
 
-    preds = np.zeros([num_samples, len(action_classes), len(streams)])
+    preds = np.zeros([num_samples, len(action_classes), num_preds_out_channels])
     truth_labels = np.zeros([num_samples,1])
     truth_labels = VideoDataset(csv_file='datasets/' + args.dataset + '/dataset.csv',
                                 root_dir='datasets/' + args.dataset + '/data/',
@@ -61,12 +48,14 @@ def run_demo(args):
         model.load_state_dict(torch.load('models/' + args.model + '/checkpoints/' + args.model + '_' + input_stream + '.pth'))
         model.cuda()
 
-        for idx in range(len(dataset)):
-            idx += 90
+        #for idx in range(len(dataset)):
+        for idx in range(5):
+            idx += 95
             print ("stream: " + input_stream + "   idx: " + str(idx))
             try:
-                out_var, out_logit  = model( torch.autograd.Variable(torch.from_numpy(dataset[idx]['video'].transpose(0, 4, 1, 2, 3)).cuda()) )
-                preds[idx,:,stream_idx] = out_var.data.cpu().numpy()
+                out_var, logits  = model( torch.autograd.Variable(torch.from_numpy(dataset[idx]['video'].transpose(0, 4, 1, 2, 3)).cuda()) )
+                preds[idx,:,stream_idx] = logits.data.cpu().numpy()
+                out_logits[idx][stream_idx] = logits
             except:
                 print('error handling video ' + str(idx))
 
@@ -79,22 +68,21 @@ def run_demo(args):
         torch.cuda.empty_cache()
         model = None
         gc.collect()
+        np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
+                 truth_labels=truth_labels, 
+                 preds=preds) 
         stream_idx += 1
 
-"""
     # Joint model
     if args.stream == 'joint':
-        out_logit = out_rgb_logit + out_flow_logit
-        out_softmax = torch.nn.functional.softmax(out_logit, 1).data.cpu()
-        top_val, top_idx = torch.sort(out_softmax, 1, descending=True)
+        for idx in range(len(dataset)):
+            joint_logits = out_logits[idx][0] + out_logits[idx][1]
+            print ( torch.nn.functional.softmax(joint_logits, 1).data.cpu().numpy().shape )
+            preds[idx,:,2] = torch.nn.functional.softmax(joint_logits, 1).data.cpu().numpy().T
 
-        print('===== Final predictions ====')
-        print('logits proba class '.format(args.top_k))
-        for i in range(args.top_k):
-            logit_score = out_logit[0, top_idx[0, i]].data[0]
-            print('{:.6e} {:.6e} {}'.format(logit_score, top_val[0, i],
-                                            action_classes[top_idx[0, i]]))
-"""
+        np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
+                 truth_labels=truth_labels, 
+                 preds=preds) 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser('Evaluating the I3D model, and possible variants, on video datasets')
