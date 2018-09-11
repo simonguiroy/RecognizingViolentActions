@@ -24,23 +24,20 @@ class VideoDataset(Dataset):
     """Dataset of video sequences, pre-processed as numpy arrays for rgb and optical-flow stream"""
 
     def __init__(self,
-                 csv_file, 
                  root_dir,
                  stream='rgb',
-                 split='train',
-                 transform=None):
+                 split='train'):
         """
         Args:
             csv_file (string): Path to the csv file with annotations.
             root_dir (string): Directory with all the video files.
             stream (string): Type of stream for model input (rgb or flow)
             split (string): Split of the dataset to take samples from [train/valid/test/all]
-            transform (callable, optional): Optional transform to be applied after preprocessing, like random croping.
         """
-        self.csv_data = genfromtxt(csv_file, delimiter=',', dtype=str)
+        self.csv_data = genfromtxt(root_dir + '/dataset_' + split + '.csv', delimiter=',', dtype=str)
         self.root_dir = root_dir
         self.stream = stream
-        self.transform = transform
+        self.split = split
 
     def __len__(self):
         return self.csv_data.shape[0]
@@ -58,9 +55,9 @@ class VideoDataset(Dataset):
         sample = {'video': None, 'label': label}
         
         if self.stream == 'rgb':
-            sample['video'] = preprocess_rgb(self.root_dir + video_filename)
+            sample['video'] = preprocess_rgb(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename)
 
         if self.stream == 'flow':
-            sample['video'] = preprocess_flow(self.root_dir + video_filename)
+            sample['video'] = preprocess_flow(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename)
 
         return sample

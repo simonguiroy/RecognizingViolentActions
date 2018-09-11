@@ -1,4 +1,5 @@
 import numpy as np
+import torch
 
 action_classes = [x.strip() for x in open('models/i3d/label_map.txt')]
 res = np.load('out/i3d/i3d-ViolentHumanActions_v0-joint.npz')
@@ -9,6 +10,17 @@ truth_labels = np.zeros([truth_labels_txt.shape[0],1])
 for i in range(truth_labels.shape[0]):
     truth_labels[i] = int( action_classes.index(truth_labels_txt[i]) )
     
+
+def compute_joints(preds):
+    for idx in range(len(dataset)):
+        joint_logits = out_logits[idx][0] + out_logits[idx]
+        preds[idx,:,2] = torch.nn.functional.softmax(joint_logits, 1).data.cpu().numpy()
+
+    np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
+             truth_labels=truth_labels,
+             preds=preds)
+
+
 
 
 def topN_acc(preds, truth_labels, n=1):

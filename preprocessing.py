@@ -14,7 +14,8 @@ def preprocess_rgb(file_path):
     # videos from UCF101 are all at 25 FPS, so no need to resample. For Kinetics, use ffmpeg to resample before.
     frame_width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
     frame_height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
-    frame_rate = cap.get(cv2.CAP_PROP_FPS)
+    #frame_rate = cap.get(cv2.CAP_PROP_FPS)
+    frame_rate = 25
     #change frame count if video to be resampled
     frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
     
@@ -36,7 +37,7 @@ def preprocess_rgb(file_path):
 
     ret = True
     #using 0-based index of the frame to be decoded/captured next
-    while(cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count/2 and ret == True):
+    while(cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count and ret == True):
         ret, frame = cap.read()            
         if ret == True:
             #Resizing frame with bilinear interpolation
@@ -65,9 +66,11 @@ def preprocess_flow(file_path):
     
     frame_width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
     frame_height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
-    frame_rate = cap.get(cv2.CAP_PROP_FPS)
+    #frame_rate = cap.get(cv2.CAP_PROP_FPS)
+    frame_rate = 25
     #change frame count if video to be resampled
-    frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
+    #frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
+    frame_count = 250
     
     frame_width_resize = frame_width
     frame_height_resize = frame_height
@@ -96,7 +99,7 @@ def preprocess_flow(file_path):
     
     ret = True
     #using 0-based index of the frame to be decoded/captured next
-    while(cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count/2 and ret == True):
+    while(cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count and ret == True):
         ret, frame2 = cap.read()
         
         if ret == True:

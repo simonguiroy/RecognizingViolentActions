@@ -9,9 +9,7 @@ import gc
 
 def run_demo(args):
     action_classes = [x.strip() for x in open('models/' + args.model + '/label_map.txt')]
-    num_samples = len(VideoDataset(csv_file='datasets/' + args.dataset + '/dataset.csv',
-                               root_dir='datasets/' + args.dataset + '/data/',
-                               stream='rgb'))
+    num_samples = len(VideoDataset(root_dir='datasets/' + args.dataset, stream='rgb', split=args.split))
     if args.model == 'i3d':
         model_class = I3D
     else:
@@ -21,8 +19,12 @@ def run_demo(args):
         streams = ['rgb']
         num_preds_out_channels = 1 
     elif args.stream == 'flow':
-        streams = ['flow'] 
-        num_preds_out_channels = 1 
+#        streams = ['flow'] 
+#        num_preds_out_channels = 1 
+        streams = ['rgb', 'flow']
+        num_preds_out_channels = 3 
+        out_logits = [[None,None]] * num_samples
+
     else:
         streams = ['rgb', 'flow']
         num_preds_out_channels = 3 
@@ -35,11 +37,14 @@ def run_demo(args):
                                 stream='rgb').get_labels()
 
     np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
-             truth_labels=truth_labels, 
+             truth_labels=truth_labels,
+             out_logits=out_logits, 
              preds=preds) 
 
-    stream_idx = 0
-    for input_stream in streams:
+    stream_indices = {'rgb': 0, 'flow': 1}
+#    for input_stream in streams:
+# remove line below after and uncomment line above
+    for input_stream in ['flow']:
         dataset = VideoDataset(csv_file='datasets/' + args.dataset + '/dataset.csv',
                                root_dir='datasets/' + args.dataset + '/data/',
                                stream=input_stream)
@@ -50,17 +55,23 @@ def run_demo(args):
 
         for idx in range(len(dataset)):
             print ("stream: " + input_stream + "   idx: " + str(idx))
+            print ("video shape: ")
+            print (dataset[idx]['video'].shape)
             try:
                 out_var, logits  = model( torch.autograd.Variable(torch.from_numpy(dataset[idx]['video'].transpose(0, 4, 1, 2, 3)).cuda()) )
-                preds[idx,:,stream_idx] = logits.data.cpu().numpy()
-                out_logits[idx][stream_idx] = logits
+                preds[idx,:,stream_indices[input_stream]] = logits.data.cpu().numpy()
+                out_logits[idx][stream_indices[input_stream]] = logits
+                # When done debugging, remove above 3 lines
+                ground_truth = truth_labels[idx]
+                prediction_idx = np.argmax(logits.data.cpu().numpy())
+                print("ground truth: " + ground_truth + "\tprediction: " + action_classes[prediction_idx])
             except:
                 print('error handling video ' + str(idx))
 
-            if idx % 20 == 0:
-                np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
-                         truth_labels=truth_labels, 
-                         preds=preds)
+            np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
+                     truth_labels=truth_labels,
+                     out_logits=out_logits, 
+                     preds=preds)
 
         # Clearing GPU cache and clearing model from memory
         torch.cuda.empty_cache()
@@ -69,7 +80,6 @@ def run_demo(args):
         np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
                  truth_labels=truth_labels, 
                  preds=preds) 
-        stream_idx += 1
 
     # Joint model
     if args.stream == 'joint':
@@ -98,6 +108,12 @@ if __name__ == "__main__":
         choices=['rgb', 'flow', 'joint'],
         help='Input stream for model')
     parser.add_argument(
+        '--split',
+        type=str,
+        default='valid',
+        choices=['train', 'valid', 'test'],
+        help='Dataset split')
+    parser.add_argument(
         '--pre-trained',
         type=str,
         default='both',
@@ -109,8 +125,7 @@ if __name__ == "__main__":
         '--dataset',
         type=str,
         default='ViolentHumanActions_v0',
-        help='Name of dataset to use',
-        choices=['ViolentHumanActions_v0'])
+        help='Name of dataset to use')
     parser.add_argument(
         '--top_k',
         type=int,
