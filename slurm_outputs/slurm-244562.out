@@ -1,0 +1,4098 @@
+stream: rgb   idx: 0
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0001.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 1
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0002.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 2
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0004.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 3
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0005.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 4
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0007.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 5
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0009.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 6
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0010.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 7
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0011.mp4
+ground truth: playing_squash_or_racquetball	prediction: snowkiting
+
+
+
+stream: rgb   idx: 8
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0012.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 9
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0014.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_badminton
+
+
+
+stream: rgb   idx: 10
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0015.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 11
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0017.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 12
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0018.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 13
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0019.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 14
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0020.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 15
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0022.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 16
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0023.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 17
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0024.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 18
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0026.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 19
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0027.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 20
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0029.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 21
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0030.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 22
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0032.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 23
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0033.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 24
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0035.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 25
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0038.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_badminton
+
+
+
+stream: rgb   idx: 26
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0040.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 27
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0041.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 28
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0042.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 29
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0043.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 30
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0045.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 31
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0046.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 32
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0047.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 33
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0048.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 34
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0049.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 35
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0051.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 36
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0053.mp4
+ground truth: playing_squash_or_racquetball	prediction: climbing_ladder
+
+
+
+stream: rgb   idx: 37
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0055.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 38
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0056.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 39
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0058.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 40
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0059.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 41
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0061.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 42
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0063.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_badminton
+
+
+
+stream: rgb   idx: 43
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0064.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 44
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0065.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 45
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0066.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 46
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0067.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 47
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0069.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 48
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0070.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 49
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0071.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 50
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0073.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 51
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0074.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 52
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0075.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 53
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0082.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 54
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0083.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 55
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0084.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 56
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0085.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 57
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0086.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 58
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0087.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 59
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0089.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 60
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0090.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 61
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0091.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 62
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0093.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 63
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0095.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 64
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0098.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 65
+datasets/ViolentHumanActions_v1/data/test/playing_squash_or_racquetball/playing_squash_or_racquetball-Kinetics-test-0100.mp4
+ground truth: playing_squash_or_racquetball	prediction: playing_squash_or_racquetball
+
+
+
+stream: rgb   idx: 66
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0001.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 67
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0002.mp4
+ground truth: capoeira	prediction: headbutting
+
+
+
+stream: rgb   idx: 68
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0003.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 69
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0004.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 70
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0005.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 71
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0006.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 72
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0007.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 73
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0009.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 74
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0010.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 75
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0011.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 76
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0013.mp4
+ground truth: capoeira	prediction: celebrating
+
+
+
+stream: rgb   idx: 77
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0014.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 78
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0015.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 79
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0016.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 80
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0017.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 81
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0019.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 82
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0020.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 83
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0021.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 84
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0024.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 85
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0025.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 86
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0027.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 87
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0029.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 88
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0030.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 89
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0031.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 90
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0032.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 91
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0033.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 92
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0034.mp4
+ground truth: capoeira	prediction: yoga
+
+
+
+stream: rgb   idx: 93
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0037.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 94
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0038.mp4
+ground truth: capoeira	prediction: drop_kicking
+
+
+
+stream: rgb   idx: 95
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0039.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 96
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0040.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 97
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0045.mp4
+ground truth: capoeira	prediction: feeding_birds
+
+
+
+stream: rgb   idx: 98
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0047.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 99
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0048.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 100
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0049.mp4
+ground truth: capoeira	prediction: somersaulting
+
+
+
+stream: rgb   idx: 101
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0053.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 102
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0054.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 103
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0055.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 104
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0056.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 105
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0057.mp4
+ground truth: capoeira	prediction: pushing_cart
+
+
+
+stream: rgb   idx: 106
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0059.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 107
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0060.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 108
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0061.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 109
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0062.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 110
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0063.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 111
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0065.mp4
+ground truth: capoeira	prediction: breakdancing
+
+
+
+stream: rgb   idx: 112
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0067.mp4
+ground truth: capoeira	prediction: side_kick
+
+
+
+stream: rgb   idx: 113
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0068.mp4
+ground truth: capoeira	prediction: tap_dancing
+
+
+
+stream: rgb   idx: 114
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0069.mp4
+ground truth: capoeira	prediction: gymnastics_tumbling
+
+
+
+stream: rgb   idx: 115
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0070.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 116
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0073.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 117
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0074.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 118
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0075.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 119
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0077.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 120
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0078.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 121
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0081.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 122
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0083.mp4
+ground truth: capoeira	prediction: ice_skating
+
+
+
+stream: rgb   idx: 123
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0084.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 124
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0085.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 125
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0089.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 126
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0090.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 127
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0091.mp4
+ground truth: capoeira	prediction: side_kick
+
+
+
+stream: rgb   idx: 128
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0092.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 129
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0093.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 130
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0094.mp4
+ground truth: capoeira	prediction: somersaulting
+
+
+
+stream: rgb   idx: 131
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0095.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 132
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0096.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 133
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0097.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 134
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0098.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 135
+datasets/ViolentHumanActions_v1/data/test/capoeira/capoeira-Kinetics-test-0100.mp4
+ground truth: capoeira	prediction: capoeira
+
+
+
+stream: rgb   idx: 136
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0001.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 137
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0008.mp4
+ground truth: punching_bag	prediction: making_pizza
+
+
+
+stream: rgb   idx: 138
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0009.mp4
+ground truth: punching_bag	prediction: shredding_paper
+
+
+
+stream: rgb   idx: 139
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0011.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 140
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0012.mp4
+ground truth: punching_bag	prediction: opening_present
+
+
+
+stream: rgb   idx: 141
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0013.mp4
+ground truth: punching_bag	prediction: running_on_treadmill
+
+
+
+stream: rgb   idx: 142
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0017.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 143
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0018.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 144
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0019.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 145
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0020.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 146
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0021.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 147
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0022.mp4
+ground truth: punching_bag	prediction: opening_bottle
+
+
+
+stream: rgb   idx: 148
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0023.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 149
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0025.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 150
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0026.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 151
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0028.mp4
+ground truth: punching_bag	prediction: riding_mechanical_bull
+
+
+
+stream: rgb   idx: 152
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0029.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 153
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0031.mp4
+ground truth: punching_bag	prediction: punching_person
+
+
+
+stream: rgb   idx: 154
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0032.mp4
+ground truth: punching_bag	prediction: punching_person
+
+
+
+stream: rgb   idx: 155
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0033.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 156
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0034.mp4
+ground truth: punching_bag	prediction: windsurfing
+
+
+
+stream: rgb   idx: 157
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0036.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 158
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0037.mp4
+ground truth: punching_bag	prediction: headbutting
+
+
+
+stream: rgb   idx: 159
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0038.mp4
+ground truth: punching_bag	prediction: pumping_fist
+
+
+
+stream: rgb   idx: 160
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0039.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 161
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0042.mp4
+ground truth: punching_bag	prediction: plastering
+
+
+
+stream: rgb   idx: 162
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0043.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 163
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0044.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 164
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0045.mp4
+ground truth: punching_bag	prediction: high_kick
+
+
+
+stream: rgb   idx: 165
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0046.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 166
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0049.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 167
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0050.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 168
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0051.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 169
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0053.mp4
+ground truth: punching_bag	prediction: situp
+
+
+
+stream: rgb   idx: 170
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0055.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 171
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0056.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 172
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0058.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 173
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0060.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 174
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0063.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 175
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0064.mp4
+ground truth: punching_bag	prediction: cheerleading
+
+
+
+stream: rgb   idx: 176
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0065.mp4
+ground truth: punching_bag	prediction: waxing_legs
+
+
+
+stream: rgb   idx: 177
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0066.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 178
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0070.mp4
+ground truth: punching_bag	prediction: side_kick
+
+
+
+stream: rgb   idx: 179
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0071.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 180
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0072.mp4
+ground truth: punching_bag	prediction: sword_fighting
+
+
+
+stream: rgb   idx: 181
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0074.mp4
+ground truth: punching_bag	prediction: crying
+
+
+
+stream: rgb   idx: 182
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0076.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 183
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0077.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 184
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0078.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 185
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0080.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 186
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0081.mp4
+ground truth: punching_bag	prediction: blasting_sand
+
+
+
+stream: rgb   idx: 187
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0082.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 188
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0083.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 189
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0088.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 190
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0089.mp4
+ground truth: punching_bag	prediction: slacklining
+
+
+
+stream: rgb   idx: 191
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0091.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 192
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0092.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 193
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0093.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 194
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0094.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 195
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0096.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 196
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0097.mp4
+ground truth: punching_bag	prediction: climbing_ladder
+
+
+
+stream: rgb   idx: 197
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0098.mp4
+ground truth: punching_bag	prediction: punching_person
+
+
+
+stream: rgb   idx: 198
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0099.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 199
+datasets/ViolentHumanActions_v1/data/test/punching_bag/punching_bag-Kinetics-test-0100.mp4
+ground truth: punching_bag	prediction: punching_bag
+
+
+
+stream: rgb   idx: 200
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0002.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 201
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0003.mp4
+ground truth: kissing	prediction: yoga
+
+
+
+stream: rgb   idx: 202
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0004.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 203
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0005.mp4
+ground truth: kissing	prediction: crying
+
+
+
+stream: rgb   idx: 204
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0006.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 205
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0007.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 206
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0008.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 207
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0010.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 208
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0011.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 209
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0012.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 210
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0013.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 211
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0014.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 212
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0015.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 213
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0016.mp4
+ground truth: kissing	prediction: celebrating
+
+
+
+stream: rgb   idx: 214
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0017.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 215
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0018.mp4
+ground truth: kissing	prediction: washing_feet
+
+
+
+stream: rgb   idx: 216
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0019.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 217
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0020.mp4
+ground truth: kissing	prediction: cutting_nails
+
+
+
+stream: rgb   idx: 218
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0021.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 219
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0022.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 220
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0023.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 221
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0024.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 222
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0025.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 223
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0026.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 224
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0027.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 225
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0028.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 226
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0029.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 227
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0030.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 228
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0031.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 229
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0032.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 230
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0033.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 231
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0034.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 232
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0035.mp4
+ground truth: kissing	prediction: singing
+
+
+
+stream: rgb   idx: 233
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0037.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 234
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0038.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 235
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0039.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 236
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0040.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 237
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0041.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 238
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0042.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 239
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0043.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 240
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0044.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 241
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0045.mp4
+ground truth: kissing	prediction: hugging
+
+
+
+stream: rgb   idx: 242
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0046.mp4
+ground truth: kissing	prediction: milking_cow
+
+
+
+stream: rgb   idx: 243
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0047.mp4
+ground truth: kissing	prediction: smoking
+
+
+
+stream: rgb   idx: 244
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0048.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 245
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0049.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 246
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0050.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 247
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0051.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 248
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0052.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 249
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0053.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 250
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0054.mp4
+ground truth: kissing	prediction: slapping
+
+
+
+stream: rgb   idx: 251
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0055.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 252
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0057.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 253
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0058.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 254
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0059.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 255
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0060.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 256
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0061.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 257
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0062.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 258
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0063.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 259
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0064.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 260
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0066.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 261
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0067.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 262
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0068.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 263
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0070.mp4
+ground truth: kissing	prediction: crying
+
+
+
+stream: rgb   idx: 264
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0071.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 265
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0072.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 266
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0073.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 267
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0074.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 268
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0075.mp4
+ground truth: kissing	prediction: sniffing
+
+
+
+stream: rgb   idx: 269
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0076.mp4
+ground truth: kissing	prediction: shaving_head
+
+
+
+stream: rgb   idx: 270
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0077.mp4
+ground truth: kissing	prediction: dancing_ballet
+
+
+
+stream: rgb   idx: 271
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0080.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 272
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0081.mp4
+ground truth: kissing	prediction: sneezing
+
+
+
+stream: rgb   idx: 273
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0082.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 274
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0083.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 275
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0084.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 276
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0085.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 277
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0086.mp4
+ground truth: kissing	prediction: robot_dancing
+
+
+
+stream: rgb   idx: 278
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0087.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 279
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0088.mp4
+ground truth: kissing	prediction: busking
+
+
+
+stream: rgb   idx: 280
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0089.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 281
+datasets/ViolentHumanActions_v1/data/test/kissing/kissing-Kinetics-test-0090.mp4
+ground truth: kissing	prediction: kissing
+
+
+
+stream: rgb   idx: 282
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0001.mp4
+ground truth: headbanging	prediction: dancing_ballet
+
+
+
+stream: rgb   idx: 283
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0002.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 284
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0003.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 285
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0004.mp4
+ground truth: headbanging	prediction: push_up
+
+
+
+stream: rgb   idx: 286
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0007.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 287
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0008.mp4
+ground truth: headbanging	prediction: dancing_gangnam_style
+
+
+
+stream: rgb   idx: 288
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0009.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 289
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0013.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 290
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0015.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 291
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0017.mp4
+ground truth: headbanging	prediction: changing_oil
+
+
+
+stream: rgb   idx: 292
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0018.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 293
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0019.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 294
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0022.mp4
+ground truth: headbanging	prediction: air_drumming
+
+
+
+stream: rgb   idx: 295
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0024.mp4
+ground truth: headbanging	prediction: pumping_fist
+
+
+
+stream: rgb   idx: 296
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0028.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 297
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0029.mp4
+ground truth: headbanging	prediction: pumping_fist
+
+
+
+stream: rgb   idx: 298
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0030.mp4
+ground truth: headbanging	prediction: feeding_birds
+
+
+
+stream: rgb   idx: 299
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0032.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 300
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0033.mp4
+ground truth: headbanging	prediction: spinning_poi
+
+
+
+stream: rgb   idx: 301
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0035.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 302
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0036.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 303
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0038.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 304
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0040.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 305
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0041.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 306
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0042.mp4
+ground truth: headbanging	prediction: playing_bass_guitar
+
+
+
+stream: rgb   idx: 307
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0043.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 308
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0044.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 309
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0045.mp4
+ground truth: headbanging	prediction: pushing_cart
+
+
+
+stream: rgb   idx: 310
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0047.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 311
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0048.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 312
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0049.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 313
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0050.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 314
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0051.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 315
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0052.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 316
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0053.mp4
+ground truth: headbanging	prediction: hula_hooping
+
+
+
+stream: rgb   idx: 317
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0054.mp4
+ground truth: headbanging	prediction: extinguishing_fire
+
+
+
+stream: rgb   idx: 318
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0055.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 319
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0056.mp4
+ground truth: headbanging	prediction: fixing_hair
+
+
+
+stream: rgb   idx: 320
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0058.mp4
+ground truth: headbanging	prediction: shaking_head
+
+
+
+stream: rgb   idx: 321
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0059.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 322
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0061.mp4
+ground truth: headbanging	prediction: crawling_baby
+
+
+
+stream: rgb   idx: 323
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0062.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 324
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0063.mp4
+ground truth: headbanging	prediction: sneezing
+
+
+
+stream: rgb   idx: 325
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0065.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 326
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0066.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 327
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0068.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 328
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0071.mp4
+ground truth: headbanging	prediction: kissing
+
+
+
+stream: rgb   idx: 329
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0072.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 330
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0073.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 331
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0074.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 332
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0075.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 333
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0079.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 334
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0080.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 335
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0081.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 336
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0083.mp4
+ground truth: headbanging	prediction: beatboxing
+
+
+
+stream: rgb   idx: 337
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0085.mp4
+ground truth: headbanging	prediction: crying
+
+
+
+stream: rgb   idx: 338
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0086.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 339
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0087.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 340
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0089.mp4
+ground truth: headbanging	prediction: driving_tractor
+
+
+
+stream: rgb   idx: 341
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0090.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 342
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0091.mp4
+ground truth: headbanging	prediction: headbanging
+
+
+
+stream: rgb   idx: 343
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0092.mp4
+ground truth: headbanging	prediction: shaking_head
+
+
+
+stream: rgb   idx: 344
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0093.mp4
+ground truth: headbanging	prediction: playing_chess
+
+
+
+stream: rgb   idx: 345
+datasets/ViolentHumanActions_v1/data/test/headbanging/headbanging-Kinetics-test-0094.mp4
+ground truth: headbanging	prediction: finger_snapping
+
+
+
+stream: rgb   idx: 346
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0002.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 347
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0005.mp4
+ground truth: shaking_head	prediction: clapping
+
+
+
+stream: rgb   idx: 348
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0006.mp4
+ground truth: shaking_head	prediction: pumping_fist
+
+
+
+stream: rgb   idx: 349
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0009.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 350
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0012.mp4
+ground truth: shaking_head	prediction: crying
+
+
+
+stream: rgb   idx: 351
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0014.mp4
+ground truth: shaking_head	prediction: playing_monopoly
+
+
+
+stream: rgb   idx: 352
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0015.mp4
+ground truth: shaking_head	prediction: pumping_fist
+
+
+
+stream: rgb   idx: 353
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0016.mp4
+ground truth: shaking_head	prediction: headbanging
+
+
+
+stream: rgb   idx: 354
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0017.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 355
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0018.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 356
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0020.mp4
+ground truth: shaking_head	prediction: baby_waking_up
+
+
+
+stream: rgb   idx: 357
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0021.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 358
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0022.mp4
+ground truth: shaking_head	prediction: headbutting
+
+
+
+stream: rgb   idx: 359
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0023.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 360
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0025.mp4
+ground truth: shaking_head	prediction: pumping_fist
+
+
+
+stream: rgb   idx: 361
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0030.mp4
+ground truth: shaking_head	prediction: ripping_paper
+
+
+
+stream: rgb   idx: 362
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0031.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 363
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0033.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 364
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0034.mp4
+ground truth: shaking_head	prediction: crawling_baby
+
+
+
+stream: rgb   idx: 365
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0035.mp4
+ground truth: shaking_head	prediction: crawling_baby
+
+
+
+stream: rgb   idx: 366
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0036.mp4
+ground truth: shaking_head	prediction: headbanging
+
+
+
+stream: rgb   idx: 367
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0037.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 368
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0038.mp4
+ground truth: shaking_head	prediction: beatboxing
+
+
+
+stream: rgb   idx: 369
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0039.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 370
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0040.mp4
+ground truth: shaking_head	prediction: changing_oil
+
+
+
+stream: rgb   idx: 371
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0045.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 372
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0046.mp4
+ground truth: shaking_head	prediction: doing_laundry
+
+
+
+stream: rgb   idx: 373
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0047.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 374
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0049.mp4
+ground truth: shaking_head	prediction: headbutting
+
+
+
+stream: rgb   idx: 375
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0050.mp4
+ground truth: shaking_head	prediction: sneezing
+
+
+
+stream: rgb   idx: 376
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0051.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 377
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0052.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 378
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0055.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 379
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0056.mp4
+ground truth: shaking_head	prediction: sneezing
+
+
+
+stream: rgb   idx: 380
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0057.mp4
+ground truth: shaking_head	prediction: baby_waking_up
+
+
+
+stream: rgb   idx: 381
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0058.mp4
+ground truth: shaking_head	prediction: crying
+
+
+
+stream: rgb   idx: 382
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0059.mp4
+ground truth: shaking_head	prediction: eating_cake
+
+
+
+stream: rgb   idx: 383
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0060.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 384
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0061.mp4
+ground truth: shaking_head	prediction: beatboxing
+
+
+
+stream: rgb   idx: 385
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0062.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 386
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0064.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 387
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0065.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 388
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0066.mp4
+ground truth: shaking_head	prediction: flipping_pancake
+
+
+
+stream: rgb   idx: 389
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0067.mp4
+ground truth: shaking_head	prediction: petting_cat
+
+
+
+stream: rgb   idx: 390
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0071.mp4
+ground truth: shaking_head	prediction: baby_waking_up
+
+
+
+stream: rgb   idx: 391
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0075.mp4
+ground truth: shaking_head	prediction: baby_waking_up
+
+
+
+stream: rgb   idx: 392
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0076.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 393
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0077.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 394
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0080.mp4
+ground truth: shaking_head	prediction: pumping_fist
+
+
+
+stream: rgb   idx: 395
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0081.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 396
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0084.mp4
+ground truth: shaking_head	prediction: hopscotch
+
+
+
+stream: rgb   idx: 397
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0087.mp4
+ground truth: shaking_head	prediction: eating_chips
+
+
+
+stream: rgb   idx: 398
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0088.mp4
+ground truth: shaking_head	prediction: headbanging
+
+
+
+stream: rgb   idx: 399
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0089.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 400
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0092.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 401
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0095.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 402
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0096.mp4
+ground truth: shaking_head	prediction: pumping_fist
+
+
+
+stream: rgb   idx: 403
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0097.mp4
+ground truth: shaking_head	prediction: shaking_head
+
+
+
+stream: rgb   idx: 404
+datasets/ViolentHumanActions_v1/data/test/shaking_head/shaking_head-Kinetics-test-0099.mp4
+ground truth: shaking_head	prediction: laughing
+
+
+
+stream: rgb   idx: 405
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0001.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 406
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0003.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 407
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0004.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 408
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0005.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 409
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0006.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 410
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0007.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 411
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0009.mp4
+ground truth: playing_cricket	prediction: riding_camel
+
+
+
+stream: rgb   idx: 412
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0011.mp4
+ground truth: playing_cricket	prediction: dancing_macarena
+
+
+
+stream: rgb   idx: 413
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0012.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 414
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0014.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 415
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0015.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 416
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0016.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 417
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0017.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 418
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0018.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 419
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0019.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 420
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0020.mp4
+ground truth: playing_cricket	prediction: sweeping_floor
+
+
+
+stream: rgb   idx: 421
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0021.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 422
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0022.mp4
+ground truth: playing_cricket	prediction: walking_the_dog
+
+
+
+stream: rgb   idx: 423
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0023.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 424
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0024.mp4
+ground truth: playing_cricket	prediction: ice_skating
+
+
+
+stream: rgb   idx: 425
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0026.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 426
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0028.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 427
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0029.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 428
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0030.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 429
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0032.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 430
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0034.mp4
+ground truth: playing_cricket	prediction: sword_fighting
+
+
+
+stream: rgb   idx: 431
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0040.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 432
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0041.mp4
+ground truth: playing_cricket	prediction: drop_kicking
+
+
+
+stream: rgb   idx: 433
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0042.mp4
+ground truth: playing_cricket	prediction: hopscotch
+
+
+
+stream: rgb   idx: 434
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0043.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 435
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0044.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 436
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0047.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 437
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0048.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 438
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0050.mp4
+ground truth: playing_cricket	prediction: zumba
+
+
+
+stream: rgb   idx: 439
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0053.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 440
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0055.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 441
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0056.mp4
+ground truth: playing_cricket	prediction: moving_furniture
+
+
+
+stream: rgb   idx: 442
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0057.mp4
+ground truth: playing_cricket	prediction: sweeping_floor
+
+
+
+stream: rgb   idx: 443
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0058.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 444
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0059.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 445
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0060.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 446
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0061.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 447
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0062.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 448
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0063.mp4
+ground truth: playing_cricket	prediction: disc_golfing
+
+
+
+stream: rgb   idx: 449
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0064.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 450
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0066.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 451
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0068.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 452
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0069.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 453
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0071.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 454
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0072.mp4
+ground truth: playing_cricket	prediction: kissing
+
+
+
+stream: rgb   idx: 455
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0073.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 456
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0074.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 457
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0075.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 458
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0076.mp4
+ground truth: playing_cricket	prediction: high_jump
+
+
+
+stream: rgb   idx: 459
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0077.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 460
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0078.mp4
+ground truth: playing_cricket	prediction: catching_or_throwing_frisbee
+
+
+
+stream: rgb   idx: 461
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0079.mp4
+ground truth: playing_cricket	prediction: disc_golfing
+
+
+
+stream: rgb   idx: 462
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0080.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 463
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0081.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 464
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0082.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 465
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0083.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 466
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0084.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 467
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0085.mp4
+ground truth: playing_cricket	prediction: playing_kickball
+
+
+
+stream: rgb   idx: 468
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0086.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 469
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0089.mp4
+ground truth: playing_cricket	prediction: slacklining
+
+
+
+stream: rgb   idx: 470
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0091.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 471
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0092.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 472
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0093.mp4
+ground truth: playing_cricket	prediction: playing_ice_hockey
+
+
+
+stream: rgb   idx: 473
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0094.mp4
+ground truth: playing_cricket	prediction: ski_jumping
+
+
+
+stream: rgb   idx: 474
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0095.mp4
+ground truth: playing_cricket	prediction: passing_American_football_not_in_game
+
+
+
+stream: rgb   idx: 475
+datasets/ViolentHumanActions_v1/data/test/playing_cricket/playing_cricket-Kinetics-test-0098.mp4
+ground truth: playing_cricket	prediction: playing_cricket
+
+
+
+stream: rgb   idx: 476
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0001.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 477
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0003.mp4
+ground truth: stretching_arm	prediction: stretching_leg
+
+
+
+stream: rgb   idx: 478
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0004.mp4
+THCudaCheck FAIL file=/pytorch/torch/lib/THC/generic/THCStorage.cu line=58 error=2 : out of memory
+error handling video 478
+stream: rgb   idx: 479
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0005.mp4
+error handling video 479
+stream: rgb   idx: 480
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0006.mp4
+ground truth: stretching_arm	prediction: yoga
+
+
+
+stream: rgb   idx: 481
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0007.mp4
+ground truth: stretching_arm	prediction: playing_didgeridoo
+
+
+
+stream: rgb   idx: 482
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0011.mp4
+ground truth: stretching_arm	prediction: golf_putting
+
+
+
+stream: rgb   idx: 483
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0012.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 484
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0015.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 485
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0017.mp4
+ground truth: stretching_arm	prediction: yoga
+
+
+
+stream: rgb   idx: 486
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0018.mp4
+ground truth: stretching_arm	prediction: pull_ups
+
+
+
+stream: rgb   idx: 487
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0020.mp4
+error handling video 487
+stream: rgb   idx: 488
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0021.mp4
+error handling video 488
+stream: rgb   idx: 489
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0025.mp4
+ground truth: stretching_arm	prediction: plastering
+
+
+
+stream: rgb   idx: 490
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0027.mp4
+ground truth: stretching_arm	prediction: blasting_sand
+
+
+
+stream: rgb   idx: 491
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0028.mp4
+ground truth: stretching_arm	prediction: playing_cello
+
+
+
+stream: rgb   idx: 492
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0029.mp4
+ground truth: stretching_arm	prediction: stretching_leg
+
+
+
+stream: rgb   idx: 493
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0031.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 494
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0032.mp4
+ground truth: stretching_arm	prediction: stretching_leg
+
+
+
+stream: rgb   idx: 495
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0033.mp4
+ground truth: stretching_arm	prediction: squat
+
+
+
+stream: rgb   idx: 496
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0034.mp4
+ground truth: stretching_arm	prediction: exercising_arm
+
+
+
+stream: rgb   idx: 497
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0035.mp4
+ground truth: stretching_arm	prediction: folding_clothes
+
+
+
+stream: rgb   idx: 498
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0036.mp4
+ground truth: stretching_arm	prediction: kissing
+
+
+
+stream: rgb   idx: 499
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0038.mp4
+ground truth: stretching_arm	prediction: yoga
+
+
+
+stream: rgb   idx: 500
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0041.mp4
+ground truth: stretching_arm	prediction: dancing_ballet
+
+
+
+stream: rgb   idx: 501
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0042.mp4
+ground truth: stretching_arm	prediction: massaging_person's_head
+
+
+
+stream: rgb   idx: 502
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0043.mp4
+ground truth: stretching_arm	prediction: spray_painting
+
+
+
+stream: rgb   idx: 503
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0044.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 504
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0045.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 505
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0046.mp4
+ground truth: stretching_arm	prediction: squat
+
+
+
+stream: rgb   idx: 506
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0047.mp4
+ground truth: stretching_arm	prediction: stretching_leg
+
+
+
+stream: rgb   idx: 507
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0049.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 508
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0050.mp4
+ground truth: stretching_arm	prediction: riding_unicycle
+
+
+
+stream: rgb   idx: 509
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0051.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 510
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0056.mp4
+ground truth: stretching_arm	prediction: sign_language_interpreting
+
+
+
+stream: rgb   idx: 511
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0059.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 512
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0060.mp4
+ground truth: stretching_arm	prediction: somersaulting
+
+
+
+stream: rgb   idx: 513
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0061.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 514
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0062.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 515
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0063.mp4
+ground truth: stretching_arm	prediction: cheerleading
+
+
+
+stream: rgb   idx: 516
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0064.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 517
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0065.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 518
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0066.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 519
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0068.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 520
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0070.mp4
+ground truth: stretching_arm	prediction: stretching_leg
+
+
+
+stream: rgb   idx: 521
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0072.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 522
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0074.mp4
+ground truth: stretching_arm	prediction: stretching_leg
+
+
+
+stream: rgb   idx: 523
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0075.mp4
+ground truth: stretching_arm	prediction: jumpstyle_dancing
+
+
+
+stream: rgb   idx: 524
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0076.mp4
+ground truth: stretching_arm	prediction: exercising_arm
+
+
+
+stream: rgb   idx: 525
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0077.mp4
+ground truth: stretching_arm	prediction: springboard_diving
+
+
+
+stream: rgb   idx: 526
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0079.mp4
+ground truth: stretching_arm	prediction: riding_unicycle
+
+
+
+stream: rgb   idx: 527
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0080.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 528
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0082.mp4
+ground truth: stretching_arm	prediction: ice_fishing
+
+
+
+stream: rgb   idx: 529
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0084.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 530
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0085.mp4
+ground truth: stretching_arm	prediction: shaking_head
+
+
+
+stream: rgb   idx: 531
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0086.mp4
+ground truth: stretching_arm	prediction: robot_dancing
+
+
+
+stream: rgb   idx: 532
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0087.mp4
+ground truth: stretching_arm	prediction: brushing_hair
+
+
+
+stream: rgb   idx: 533
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0089.mp4
+ground truth: stretching_arm	prediction: massaging_feet
+
+
+
+stream: rgb   idx: 534
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0090.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 535
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0092.mp4
+ground truth: stretching_arm	prediction: tai_chi
+
+
+
+stream: rgb   idx: 536
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0093.mp4
+ground truth: stretching_arm	prediction: shoveling_snow
+
+
+
+stream: rgb   idx: 537
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0095.mp4
+ground truth: stretching_arm	prediction: front_raises
+
+
+
+stream: rgb   idx: 538
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0096.mp4
+ground truth: stretching_arm	prediction: front_raises
+
+
+
+stream: rgb   idx: 539
+datasets/ViolentHumanActions_v1/data/test/stretching_arm/stretching_arm-Kinetics-test-0097.mp4
+ground truth: stretching_arm	prediction: stretching_arm
+
+
+
+stream: rgb   idx: 540
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0002.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 541
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0003.mp4
+ground truth: tango_dancing	prediction: jumpstyle_dancing
+
+
+
+stream: rgb   idx: 542
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0004.mp4
+ground truth: tango_dancing	prediction: dancing_charleston
+
+
+
+stream: rgb   idx: 543
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0007.mp4
+ground truth: tango_dancing	prediction: singing
+
+
+
+stream: rgb   idx: 544
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0009.mp4
+ground truth: tango_dancing	prediction: ice_skating
+
+
+
+stream: rgb   idx: 545
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0012.mp4
+ground truth: tango_dancing	prediction: smoking
+
+
+
+stream: rgb   idx: 546
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0014.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 547
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0015.mp4
+ground truth: tango_dancing	prediction: jumpstyle_dancing
+
+
+
+stream: rgb   idx: 548
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0016.mp4
+ground truth: tango_dancing	prediction: high_kick
+
+
+
+stream: rgb   idx: 549
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0017.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 550
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0018.mp4
+ground truth: tango_dancing	prediction: dribbling_basketball
+
+
+
+stream: rgb   idx: 551
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0019.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 552
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0021.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 553
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0022.mp4
+ground truth: tango_dancing	prediction: sword_fighting
+
+
+
+stream: rgb   idx: 554
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0026.mp4
+ground truth: tango_dancing	prediction: tap_dancing
+
+
+
+stream: rgb   idx: 555
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0027.mp4
+ground truth: tango_dancing	prediction: headbutting
+
+
+
+stream: rgb   idx: 556
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0029.mp4
+ground truth: tango_dancing	prediction: dancing_ballet
+
+
+
+stream: rgb   idx: 557
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0030.mp4
+ground truth: tango_dancing	prediction: news_anchoring
+
+
+
+stream: rgb   idx: 558
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0031.mp4
+ground truth: tango_dancing	prediction: dancing_ballet
+
+
+
+stream: rgb   idx: 559
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0035.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 560
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0036.mp4
+ground truth: tango_dancing	prediction: pushing_car
+
+
+
+stream: rgb   idx: 561
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0037.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 562
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0038.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 563
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0039.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 564
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0040.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 565
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0042.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 566
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0044.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 567
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0045.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 568
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0047.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 569
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0048.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 570
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0049.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 571
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0051.mp4
+error handling video 571
+stream: rgb   idx: 572
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0054.mp4
+error handling video 572
+stream: rgb   idx: 573
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0057.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 574
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0058.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 575
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0062.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 576
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0064.mp4
+ground truth: tango_dancing	prediction: tap_dancing
+
+
+
+stream: rgb   idx: 577
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0068.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 578
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0069.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 579
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0071.mp4
+ground truth: tango_dancing	prediction: salsa_dancing
+
+
+
+stream: rgb   idx: 580
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0072.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 581
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0073.mp4
+ground truth: tango_dancing	prediction: marching
+
+
+
+stream: rgb   idx: 582
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0074.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 583
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0077.mp4
+ground truth: tango_dancing	prediction: salsa_dancing
+
+
+
+stream: rgb   idx: 584
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0079.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 585
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0081.mp4
+ground truth: tango_dancing	prediction: dancing_charleston
+
+
+
+stream: rgb   idx: 586
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0082.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 587
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0083.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 588
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0085.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 589
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0086.mp4
+ground truth: tango_dancing	prediction: dancing_gangnam_style
+
+
+
+stream: rgb   idx: 590
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0087.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 591
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0088.mp4
+ground truth: tango_dancing	prediction: tai_chi
+
+
+
+stream: rgb   idx: 592
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0089.mp4
+ground truth: tango_dancing	prediction: playing_violin
+
+
+
+stream: rgb   idx: 593
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0090.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 594
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0092.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 595
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0093.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 596
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0094.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 597
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0098.mp4
+ground truth: tango_dancing	prediction: answering_questions
+
+
+
+stream: rgb   idx: 598
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0099.mp4
+ground truth: tango_dancing	prediction: smoking
+
+
+
+stream: rgb   idx: 599
+datasets/ViolentHumanActions_v1/data/test/tango_dancing/tango_dancing-Kinetics-test-0100.mp4
+ground truth: tango_dancing	prediction: tango_dancing
+
+
+
+stream: rgb   idx: 600
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0002.mp4
+ground truth: singing	prediction: singing
+
+
+
+stream: rgb   idx: 601
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0004.mp4
+ground truth: singing	prediction: giving_or_receiving_award
+
+
+
+stream: rgb   idx: 602
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0005.mp4
+ground truth: singing	prediction: dancing_ballet
+
+
+
+stream: rgb   idx: 603
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0007.mp4
+ground truth: singing	prediction: tasting_food
+
+
+
+stream: rgb   idx: 604
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0008.mp4
+ground truth: singing	prediction: singing
+
+
+
+stream: rgb   idx: 605
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0009.mp4
+ground truth: singing	prediction: spray_painting
+
+
+
+stream: rgb   idx: 606
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0010.mp4
+ground truth: singing	prediction: disc_golfing
+
+
+
+stream: rgb   idx: 607
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0013.mp4
+ground truth: singing	prediction: celebrating
+
+
+
+stream: rgb   idx: 608
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0015.mp4
+ground truth: singing	prediction: cheerleading
+
+
+
+stream: rgb   idx: 609
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0016.mp4
+ground truth: singing	prediction: snowmobiling
+
+
+
+stream: rgb   idx: 610
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0018.mp4
+ground truth: singing	prediction: playing_ukulele
+
+
+
+stream: rgb   idx: 611
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0020.mp4
+ground truth: singing	prediction: playing_recorder
+
+
+
+stream: rgb   idx: 612
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0022.mp4
+ground truth: singing	prediction: playing_bagpipes
+
+
+
+stream: rgb   idx: 613
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0023.mp4
+ground truth: singing	prediction: whistling
+
+
+
+stream: rgb   idx: 614
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0024.mp4
+ground truth: singing	prediction: singing
+
+
+
+stream: rgb   idx: 615
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0025.mp4
+ground truth: singing	prediction: robot_dancing
+
+
+
+stream: rgb   idx: 616
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0026.mp4
+ground truth: singing	prediction: surfing_crowd
+
+
+
+stream: rgb   idx: 617
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0027.mp4
+ground truth: singing	prediction: headbanging
+
+
+
+stream: rgb   idx: 618
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0028.mp4
+ground truth: singing	prediction: answering_questions
+
+
+
+stream: rgb   idx: 619
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0030.mp4
+error handling video 619
+stream: rgb   idx: 620
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0031.mp4
+error handling video 620
+stream: rgb   idx: 621
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0032.mp4
+ground truth: singing	prediction: headbanging
+
+
+
+stream: rgb   idx: 622
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0033.mp4
+ground truth: singing	prediction: playing_harmonica
+
+
+
+stream: rgb   idx: 623
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0034.mp4
+ground truth: singing	prediction: presenting_weather_forecast
+
+
+
+stream: rgb   idx: 624
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0035.mp4
+ground truth: singing	prediction: singing
+
+
+
+stream: rgb   idx: 625
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0036.mp4
+ground truth: singing	prediction: playing_guitar
+
+
+
+stream: rgb   idx: 626
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0038.mp4
+ground truth: singing	prediction: giving_or_receiving_award
+
+
+
+stream: rgb   idx: 627
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0040.mp4
+ground truth: singing	prediction: playing_recorder
+
+
+
+stream: rgb   idx: 628
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0042.mp4
+ground truth: singing	prediction: reading_newspaper
+
+
+
+stream: rgb   idx: 629
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0043.mp4
+ground truth: singing	prediction: kissing
+
+
+
+stream: rgb   idx: 630
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0044.mp4
+ground truth: singing	prediction: playing_recorder
+
+
+
+stream: rgb   idx: 631
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0045.mp4
+ground truth: singing	prediction: whistling
+
+
+
+stream: rgb   idx: 632
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0046.mp4
+ground truth: singing	prediction: playing_xylophone
+
+
+
+stream: rgb   idx: 633
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0047.mp4
+ground truth: singing	prediction: playing_bagpipes
+
+
+
+stream: rgb   idx: 634
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0049.mp4
+ground truth: singing	prediction: doing_nails
+
+
+
+stream: rgb   idx: 635
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0050.mp4
+ground truth: singing	prediction: beatboxing
+
+
+
+stream: rgb   idx: 636
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0051.mp4
+ground truth: singing	prediction: singing
+
+
+
+stream: rgb   idx: 637
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0052.mp4
+ground truth: singing	prediction: bungee_jumping
+
+
+
+stream: rgb   idx: 638
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0053.mp4
+ground truth: singing	prediction: walking_the_dog
+
+
+
+stream: rgb   idx: 639
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0054.mp4
+ground truth: singing	prediction: celebrating
+
+
+
+stream: rgb   idx: 640
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0055.mp4
+ground truth: singing	prediction: whistling
+
+
+
+stream: rgb   idx: 641
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0056.mp4
+ground truth: singing	prediction: singing
+
+
+
+stream: rgb   idx: 642
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0058.mp4
+ground truth: singing	prediction: contact_juggling
+
+
+
+stream: rgb   idx: 643
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0059.mp4
+ground truth: singing	prediction: smoking_hookah
+
+
+
+stream: rgb   idx: 644
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0060.mp4
+ground truth: singing	prediction: answering_questions
+
+
+
+stream: rgb   idx: 645
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0064.mp4
+ground truth: singing	prediction: robot_dancing
+
+
+
+stream: rgb   idx: 646
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0065.mp4
+ground truth: singing	prediction: catching_or_throwing_frisbee
+
+
+
+stream: rgb   idx: 647
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0066.mp4
+ground truth: singing	prediction: juggling_balls
+
+
+
+stream: rgb   idx: 648
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0067.mp4
+ground truth: singing	prediction: playing_xylophone
+
+
+
+stream: rgb   idx: 649
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0068.mp4
+ground truth: singing	prediction: playing_bass_guitar
+
+
+
+stream: rgb   idx: 650
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0069.mp4
+ground truth: singing	prediction: playing_guitar
+
+
+
+stream: rgb   idx: 651
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0070.mp4
+ground truth: singing	prediction: singing
+
+
+
+stream: rgb   idx: 652
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0071.mp4
+ground truth: singing	prediction: dancing_macarena
+
+
+
+stream: rgb   idx: 653
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0072.mp4
+ground truth: singing	prediction: singing
+
+
+
+stream: rgb   idx: 654
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0073.mp4
+ground truth: singing	prediction: ripping_paper
+
+
+
+stream: rgb   idx: 655
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0076.mp4
+ground truth: singing	prediction: sign_language_interpreting
+
+
+
+stream: rgb   idx: 656
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0078.mp4
+ground truth: singing	prediction: petting_cat
+
+
+
+stream: rgb   idx: 657
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0082.mp4
+ground truth: singing	prediction: beatboxing
+
+
+
+stream: rgb   idx: 658
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0083.mp4
+ground truth: singing	prediction: rock_climbing
+
+
+
+stream: rgb   idx: 659
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0085.mp4
+ground truth: singing	prediction: headbanging
+
+
+
+stream: rgb   idx: 660
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0086.mp4
+ground truth: singing	prediction: sneezing
+
+
+
+stream: rgb   idx: 661
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0089.mp4
+ground truth: singing	prediction: singing
+
+
+
+stream: rgb   idx: 662
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0090.mp4
+ground truth: singing	prediction: juggling_balls
+
+
+
+stream: rgb   idx: 663
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0091.mp4
+ground truth: singing	prediction: answering_questions
+
+
+
+stream: rgb   idx: 664
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0092.mp4
+ground truth: singing	prediction: smoking_hookah
+
+
+
+stream: rgb   idx: 665
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0093.mp4
+ground truth: singing	prediction: playing_trombone
+
+
+
+stream: rgb   idx: 666
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0094.mp4
+ground truth: singing	prediction: flipping_pancake
+
+
+
+stream: rgb   idx: 667
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0095.mp4
+ground truth: singing	prediction: answering_questions
+
+
+
+stream: rgb   idx: 668
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0096.mp4
+ground truth: singing	prediction: crying
+
+
+
+stream: rgb   idx: 669
+datasets/ViolentHumanActions_v1/data/test/singing/singing-Kinetics-test-0098.mp4
+ground truth: singing	prediction: massaging_back
+
+
+
+stream: rgb   idx: 670
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0001.mp4
+ground truth: juggling_soccer_ball	prediction: shooting_goal_soccer
+
+
+
+stream: rgb   idx: 671
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0003.mp4
+ground truth: juggling_soccer_ball	prediction: juggling_soccer_ball
+
+
+
+stream: rgb   idx: 672
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0004.mp4
+ground truth: juggling_soccer_ball	prediction: juggling_soccer_ball
+
+
+
+stream: rgb   idx: 673
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0005.mp4
+ground truth: juggling_soccer_ball	prediction: juggling_soccer_ball
+
+
+
+stream: rgb   idx: 674
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0006.mp4
+ground truth: juggling_soccer_ball	prediction: juggling_soccer_ball
+
+
+
+stream: rgb   idx: 675
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0007.mp4
+ground truth: juggling_soccer_ball	prediction: juggling_soccer_ball
+
+
+
+stream: rgb   idx: 676
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0009.mp4
+ground truth: juggling_soccer_ball	prediction: jumpstyle_dancing
+
+
+
+stream: rgb   idx: 677
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0011.mp4
+ground truth: juggling_soccer_ball	prediction: high_kick
+
+
+
+stream: rgb   idx: 678
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0012.mp4
+ground truth: juggling_soccer_ball	prediction: skateboarding
+
+
+
+stream: rgb   idx: 679
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0013.mp4
+ground truth: juggling_soccer_ball	prediction: juggling_soccer_ball
+
+
+
+stream: rgb   idx: 680
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0017.mp4
+ground truth: juggling_soccer_ball	prediction: juggling_soccer_ball
+
+
+
+stream: rgb   idx: 681
+datasets/ViolentHumanActions_v1/data/test/juggling_soccer_ball/juggling_soccer_ball-Kinetics-test-0019.mp4
+*** Error in `python': free(): invalid pointer: 0x00007f81312056a0 ***
+/var/lib/slurm-llnl/slurmd/job244562/slurm_script: line 5: 21500 Aborted                 (core dumped) python eval_rgb.py
+
+======== GPU REPORT ========
+
+==============NVSMI LOG==============
+
+Timestamp                           : Tue Sep 11 05:52:55 2018
+Driver Version                      : 396.37
+
+Attached GPUs                       : 1
+GPU 00000000:05:00.0
+    Accounting Mode                 : Disabled
+    Accounting Mode Buffer Size     : 4000
+    Accounted Processes             : None
+
+Tue Sep 11 05:52:57 2018       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 396.37                 Driver Version: 396.37                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla K80           Off  | 00000000:05:00.0 Off |                    0 |
+| N/A   40C    P0    74W / 149W |      0MiB / 11441MiB |     99%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+

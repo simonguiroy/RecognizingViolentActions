@@ -26,18 +26,20 @@ class VideoDataset(Dataset):
     def __init__(self,
                  root_dir,
                  stream='rgb',
-                 split='train'):
+                 split='train',
+                 resize_frames=1.0):
         """
         Args:
-            csv_file (string): Path to the csv file with annotations.
             root_dir (string): Directory with all the video files.
             stream (string): Type of stream for model input (rgb or flow)
             split (string): Split of the dataset to take samples from [train/valid/test/all]
+            resize_frames (int): value between 0.0 and 1.0 for resizing video frames
         """
         self.csv_data = genfromtxt(root_dir + '/dataset_' + split + '.csv', delimiter=',', dtype=str)
         self.root_dir = root_dir
         self.stream = stream
         self.split = split
+        self.resize_frames = resize_frames
 
     def __len__(self):
         return self.csv_data.shape[0]
@@ -50,14 +52,14 @@ class VideoDataset(Dataset):
                 
     def __getitem__(self, idx):
         video_filename = self.csv_data[idx][1]
-        label = self.csv_data[idx][1]
+        label = self.csv_data[idx][0]
 
         sample = {'video': None, 'label': label}
-        
+        print (self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename)        
         if self.stream == 'rgb':
-            sample['video'] = preprocess_rgb(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename)
+            sample['video'] = preprocess_rgb(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename, resize_frames=self.resize_frames)
 
         if self.stream == 'flow':
-            sample['video'] = preprocess_flow(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename)
+            sample['video'] = preprocess_flow(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename, resize_frames=self.resize_frames)
 
         return sample

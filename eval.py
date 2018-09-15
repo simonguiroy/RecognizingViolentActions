@@ -9,87 +9,55 @@ import gc
 
 def run_demo(args):
     action_classes = [x.strip() for x in open('models/' + args.model + '/label_map.txt')]
-    num_samples = len(VideoDataset(root_dir='datasets/' + args.dataset, stream='rgb', split=args.split))
+    num_samples = len(VideoDataset(root_dir='datasets/' + args.dataset, stream=args.stream, split=args.split))
     if args.model == 'i3d':
         model_class = I3D
     else:
         pass
 
-    if args.stream == 'rgb':
-        streams = ['rgb']
-        num_preds_out_channels = 1 
-    elif args.stream == 'flow':
-#        streams = ['flow'] 
-#        num_preds_out_channels = 1 
-        streams = ['rgb', 'flow']
-        num_preds_out_channels = 3 
-        out_logits = [[None,None]] * num_samples
 
-    else:
-        streams = ['rgb', 'flow']
-        num_preds_out_channels = 3 
-        out_logits = [[None,None]] * num_samples
-
-    preds = np.zeros([num_samples, len(action_classes), num_preds_out_channels])
+    out_logits = np.zeros([num_samples, len(action_classes)])
     truth_labels = np.zeros([num_samples,1])
-    truth_labels = VideoDataset(csv_file='datasets/' + args.dataset + '/dataset.csv',
-                                root_dir='datasets/' + args.dataset + '/data/',
-                                stream='rgb').get_labels()
+    truth_labels = VideoDataset(root_dir='datasets/' + args.dataset, split=args.split, stream=args.stream).get_labels()
 
-    np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
+    np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + args.suffix + '.npz',
              truth_labels=truth_labels,
-             out_logits=out_logits, 
-             preds=preds) 
+             out_logits=out_logits)
 
-    stream_indices = {'rgb': 0, 'flow': 1}
-#    for input_stream in streams:
-# remove line below after and uncomment line above
-    for input_stream in ['flow']:
-        dataset = VideoDataset(csv_file='datasets/' + args.dataset + '/dataset.csv',
-                               root_dir='datasets/' + args.dataset + '/data/',
-                               stream=input_stream)
-        model = model_class(num_classes=len(action_classes), modality=input_stream)
-        model.eval()
-        model.load_state_dict(torch.load('models/' + args.model + '/checkpoints/' + args.model + '_' + input_stream + '.pth'))
-        model.cuda()
+    dataset = VideoDataset(root_dir='datasets/' + args.dataset, split=args.split, stream=args.stream, resize_frames=args.resize_frames)
+    model = model_class(num_classes=len(action_classes), modality=args.stream)
+    model.eval()
+    model.load_state_dict(torch.load('models/' + args.model + '/checkpoints/' + args.model + '_' + args.stream + '.pth'))
+    model.cuda()
 
-        for idx in range(len(dataset)):
-            print ("stream: " + input_stream + "   idx: " + str(idx))
-            print ("video shape: ")
-            print (dataset[idx]['video'].shape)
-            try:
-                out_var, logits  = model( torch.autograd.Variable(torch.from_numpy(dataset[idx]['video'].transpose(0, 4, 1, 2, 3)).cuda()) )
-                preds[idx,:,stream_indices[input_stream]] = logits.data.cpu().numpy()
-                out_logits[idx][stream_indices[input_stream]] = logits
-                # When done debugging, remove above 3 lines
-                ground_truth = truth_labels[idx]
-                prediction_idx = np.argmax(logits.data.cpu().numpy())
-                print("ground truth: " + ground_truth + "\tprediction: " + action_classes[prediction_idx])
-            except:
-                print('error handling video ' + str(idx))
+    for idx in range(args.resume_iter, len(dataset)):
+        print ("stream: " + args.stream + "   idx: " + str(idx))
+        input = torch.autograd.Variable(torch.from_numpy(dataset[idx]['video'].transpose(0, 4, 1, 2, 3)), volatile=True).cuda()
+        out_var, logits  = model(input)
 
-            np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
-                     truth_labels=truth_labels,
-                     out_logits=out_logits, 
-                     preds=preds)
+        try:
+            out_logits[idx,:] = logits.data.cpu().numpy()
 
-        # Clearing GPU cache and clearing model from memory
-        torch.cuda.empty_cache()
-        model = None
-        gc.collect()
-        np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
-                 truth_labels=truth_labels, 
-                 preds=preds) 
-
-    # Joint model
-    if args.stream == 'joint':
-        for idx in range(len(dataset)):
-            joint_logits = out_logits[idx][0] + out_logits[idx][1]
-            preds[idx,:,2] = torch.nn.functional.softmax(joint_logits, 1).data.cpu().numpy()
+            #To display predictions at output
+            ground_truth = truth_labels[idx]
+            prediction_idx = np.argmax(logits.data.cpu().numpy())
+            print("ground truth: " + ground_truth + "\tprediction: " + action_classes[prediction_idx])
+            print('\n\n')
+        except:
+            print('error handling video ' + str(idx))
 
         np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
-                 truth_labels=truth_labels, 
-                 preds=preds) 
+                 truth_labels=truth_labels,
+                 out_logits=out_logits)
+
+    # Clearing GPU cache and clearing model from memory
+    torch.cuda.empty_cache()
+    model = None
+    gc.collect()
+    np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + args.suffix + '.npz',
+             truth_labels=truth_labels, 
+             out_logits=out_logits) 
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser('Evaluating the I3D model, and possible variants, on video datasets')
@@ -104,14 +72,18 @@ if __name__ == "__main__":
     parser.add_argument(
         '--stream',
         type=str,
-        default='joint',
-        choices=['rgb', 'flow', 'joint'],
+        choices=['rgb', 'flow'],
         help='Input stream for model')
+    parser.add_argument(
+        '--resize_frames',
+        type=float,
+        default=1.0,
+        help='Factor for resizing frames')
     parser.add_argument(
         '--split',
         type=str,
-        default='valid',
-        choices=['train', 'valid', 'test'],
+        default='test',
+        choices=['test', 'valid', 'train'],
         help='Dataset split')
     parser.add_argument(
         '--pre-trained',
@@ -124,14 +96,20 @@ if __name__ == "__main__":
     parser.add_argument(
         '--dataset',
         type=str,
-        default='ViolentHumanActions_v0',
         help='Name of dataset to use')
     parser.add_argument(
-        '--top_k',
+        '--suffix',
+        type=str,
+        default='',
+        help='Suffix to append to results file')
+
+    parser.add_argument(
+        '--resume_iter',
         type=int,
-        default='5',
-        help='When display_samples, number of top classes to display')
+        default=0,
+        help='Iteration or sample index at which to resume, if resuming an interrupted evaluation')
+
 
     args = parser.parse_args()
-    
+
     run_demo(args)
