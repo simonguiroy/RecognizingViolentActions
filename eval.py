@@ -33,9 +33,9 @@ def run_demo(args):
     for idx in range(args.resume_iter, len(dataset)):
         print ("stream: " + args.stream + "   idx: " + str(idx))
         input = torch.autograd.Variable(torch.from_numpy(dataset[idx]['video'].transpose(0, 4, 1, 2, 3)), volatile=True).cuda()
-        out_var, logits  = model(input)
 
         try:
+            out_var, logits  = model(input)
             out_logits[idx,:] = logits.data.cpu().numpy()
 
             #To display predictions at output
@@ -46,7 +46,7 @@ def run_demo(args):
         except:
             print('error handling video ' + str(idx))
 
-        np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + '.npz',
+        np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + args.suffix + '.npz',
                  truth_labels=truth_labels,
                  out_logits=out_logits)
 
