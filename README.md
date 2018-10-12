@@ -16,6 +16,8 @@
 
 - *video_dataset.py:* Creates a dataset object and by iterating throught it, returns a class label as well as the preprocessed video (output from either `preprocess_rgb` or `preprocess_flow`)
 
+- *denseflow.py:* Used to compute optical flow from a video sequence, using the TV-L1 algorithm. Still being debugged. Will soon replace `preprocess_flow`. 
+
 - *eval.py:* For a specified model and dataset, computes the prediction and outputs them as numpy array files in `/out/$model_name/`
 
 - *train.py:* training script. Currently empty as it is being refactored.
