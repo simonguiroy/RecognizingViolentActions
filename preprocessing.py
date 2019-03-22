@@ -138,6 +138,8 @@ def preprocess_flow(file_path, resize_frames=1.0):
     
     ret = True
     #using 0-based index of the frame to be decoded/captured next
+    # DEBUGGING: here we force the sequence to have a low number of frames
+    frame_count = 50 # debug : REMOVE WHEN DONE!
     while(cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count and ret == True):
         ret, frame2 = cap.read()
         
@@ -147,7 +149,14 @@ def preprocess_flow(file_path, resize_frames=1.0):
     
             #Computing dense optical flow from the previous to the current frame. The flow has 2 channels. Cliping the values
             #to the range [-20, 20]. Rescaling to the range [-1, 1].
-            flow = np.divide(np.clip(cv2.calcOpticalFlowFarneback(prvs_resized,next_resized, None, 0.5, 3, 15, 3, 5, 1.2, 0), -20.0, 20.0), 20.0)
+
+            # DEBUGGING: uncomment next line if doesn't work
+            #flow = np.divide(np.clip(cv2.calcOpticalFlowFarneback(prvs_resized,next_resized, None, 0.5, 3, 15, 3, 5, 1.2, 0), -20.0, 20.0), 20.0)
+            dtvl1 = cv2.createOptFlow_DualTVL1() #debug
+            print("computing flow: " + str(fc)) #debug
+            flow_frame = dtvl1.calc(prvs_resized, next_resized, None)
+            flow = np.divide(np.clip(flow_frame, -20.0, 20.0), 20.0) #debug
+
             #for representation of the optical flow, but actually need to work with 2-channel (vertical and horizontal) flow fields.
             buf[0, fc] = np.float32(flow)
             fc += 1

@@ -4,6 +4,7 @@ import os
 import numpy as np
 import torch
 from torch.nn import ReplicationPad3d
+import sys
 
 
 def get_padding_shape(filter_shape, stride):
@@ -261,6 +262,7 @@ class I3D(torch.nn.Module):
         out = out.mean(2)
         out_logits = out
         out = self.softmax(out_logits)
+
         return out, out_logits
 
     def load_tf_weights(self, sess):

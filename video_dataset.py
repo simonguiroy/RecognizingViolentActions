@@ -55,11 +55,12 @@ class VideoDataset(Dataset):
         label = self.csv_data[idx][0]
 
         sample = {'video': None, 'label': label}
-        print (self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename)        
+        print(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename)    #debug
         if self.stream == 'rgb':
             sample['video'] = preprocess_rgb(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename, resize_frames=self.resize_frames)
 
         if self.stream == 'flow':
             sample['video'] = preprocess_flow(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename, resize_frames=self.resize_frames)
 
-        return sample
+        #return sample
+        return sample['label'], sample['video']
