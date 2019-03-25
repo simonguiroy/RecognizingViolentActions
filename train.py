@@ -67,13 +67,14 @@ def run(args):
     model = I3D(num_classes=len(action_classes), modality=args.stream)
 
     # Initializing optimizer
-    optimizer = optim.SGD(model.parameters(), args.lr, momentum=args.momentum, dampening=0, weight_decay=0,
+    optimizer = optim.SGD(model.parameters(), args.lr, momentum=args.momentum, dampening=0, weight_decay=1e-7,
                           nesterov=False)
+    criterion = torch.nn.CrossEntropyLoss()
 
     # Loading model and optimizer state
     if args.resume_epoch == 0:
-        model.load_state_dict(torch.load('out/i3d/checkpoints/i3d_' + args.stream + '.pth'))
-        with open('out/i3d/saved_models/i3d_' + args.stream + '_train.csv', 'w') as f:
+        model.load_state_dict(torch.load('models/i3d/checkpoints/i3d_' + args.stream + '.pth'))
+        with open('out/i3d/logs/i3d_' + args.stream + '_train.csv', 'w') as f:
             writer = csv.writer(f)
             writer.writerow(['Epoch', 'train_loss', 'train_acc', 'valid_loss', 'valid_acc'])
 
@@ -92,13 +93,15 @@ def run(args):
 
     # NOTE: Calling model.train() seems to drastically affect the model prediction.
     #model.train()
+    model.eval()
 
-    for epoch in range(args.resume_epochs, args.num_epochs):
+    for epoch in range(args.resume_epoch, args.num_epochs):
         print("Epoch: " + str(epoch))
         running_loss = 0.0
         running_corrects = 0
 
         for batch_idx, batch in enumerate(train_dataloader):
+            print('Batch_idx: ' + str(batch_idx))
 
             for sample_idx in range(args.batch_size):
 
@@ -109,21 +112,22 @@ def run(args):
 
                 optimizer.zero_grad()
                 out_var, logits = model(video)
-                loss = F.cross_entropy(input=out_var, target=target)
+                #loss = F.cross_entropy(input=out_var, target=target)
+                loss = criterion(out_var, target)
 
                 running_loss += loss.item()
                 running_corrects += target.data.cpu().item() == torch.argmax(out_var).cpu().item()
-                #print("Target: " + label + " Prediction: " + action_classes[torch.argmax(out_var)])
+                print("Target: " + label + " Prediction: " + action_classes[torch.argmax(out_var)])
 
             loss /= args.batch_size
             loss.backward()
             optimizer.step()
 
-            if batch_idx % 10 == 0:
-                completion = 100 * int(batch_idx+1 * args.batch_size / len(train_dataset))
-                current_loss = running_loss / (batch_idx+1 * args.batch_size / len(train_dataset))
-                current_acc = running_corrects / (batch_idx+1 * args.batch_size / len(train_dataset))
-                print("[Train] Epoch: {}/{} Epoch completion: {} % Loss: {} Acc: {}".format(epoch, args.num_epochs,
+            if batch_idx % 10 == 0 and batch_idx > 0:
+                completion = ((batch_idx+1) * args.batch_size / len(train_dataset))
+                current_loss = running_loss / ((batch_idx+1) * args.batch_size)
+                current_acc = running_corrects / ((batch_idx+1) * args.batch_size)
+                print("[Train] Epoch: {}/{} Epoch completion: {} Loss: {} Acc: {}".format(epoch, args.num_epochs,
                                                                                             completion, current_loss,
                                                                                             current_acc))
 
@@ -158,7 +162,7 @@ def run(args):
         valid_acc = running_corrects / len(train_dataset)
         print("[Valid] Epoch: {}/{} Loss: {} Acc: {}".format(epoch, args.num_epochs, valid_loss, valid_acc))
 
-        with open('out/i3d/saved_models/i3d_' + args.stream + '_train.csv', 'a') as f:
+        with open('out/i3d/logs/i3d_' + args.stream + '_train.csv', 'a') as f:
             writer = csv.writer(f)
             writer.writerow([epoch, train_loss, train_acc, valid_loss, valid_acc])
 
@@ -182,7 +186,7 @@ def run(args):
     print("*****************************************")
     print("[Test] Epoch: {}/{} Loss: {} Acc: {}".format(epoch, args.num_epochs, test_loss, test_acc))
 
-    with open('out/i3d/saved_models/i3d_' + args.stream + '_test.csv', 'w') as f:
+    with open('out/i3d/logs/i3d_' + args.stream + '_test.csv', 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['Epoch', 'test_loss', 'test_acc'])
         writer.writerow([epoch, test_loss, test_acc])

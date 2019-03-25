@@ -50,11 +50,10 @@ def run(args):
 
     # Loading model and optimizer state
     if args.resume_epoch == 0:
-        model.load_state_dict(torch.load('out/i3d/checkpoints/i3d_' + args.stream + '.pth'))
-        with open('out/i3d/saved_models/i3d_' + args.stream + '_train.csv', 'w') as f:
+        model.load_state_dict(torch.load('models/i3d/checkpoints/i3d_' + args.stream + '.pth'))
+        with open('out/i3d/logs/i3d_' + args.stream + '_train.csv', 'w') as f:
             writer = csv.writer(f)
             writer.writerow(['Epoch', 'train_loss', 'train_acc', 'valid_loss', 'valid_acc'])
-
     else:
         checkpoint = torch.load('out/i3d/saved_models/i3d_' + args.stream + '_epoch_' + args.resume_epoch + '.pth')
         model.load_state_dict(checkpoint['state_dict'])
@@ -84,13 +83,13 @@ def run(args):
         running_loss += loss.item()
         running_corrects += target.data.cpu().item() == torch.argmax(out_var).cpu().item()
 
-    test_loss = running_loss / len(train_dataset)
-    test_acc = running_corrects / len(train_dataset)
+    test_loss = running_loss / len(test_dataset)
+    test_acc = running_corrects / len(test_dataset)
 
     print("*****************************************")
     print("[Test] Epoch: {}/{} Loss: {} Acc: {}".format(args.resume_epoch, args.num_epochs, test_loss, test_acc))
 
-    with open('out/i3d/saved_models/i3d_' + args.stream + '_test.csv', 'w') as f:
+    with open('out/i3d/logs/i3d_' + args.stream + '_test.csv', 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['Epoch', 'test_loss', 'test_acc'])
         writer.writerow([args.resume_epoch, test_loss, test_acc])
