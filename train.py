@@ -1,159 +1,198 @@
-import argparse
 import os
 import numpy as np
 from video_dataset import VideoDataset
 import torch
 import torch.optim as optim
 import torch.nn.functional as F
+from torch.utils.data import DataLoader
 from models import *
 from convert_parameters import parameters_to_vector
+from parser import get_args
 import sys
 import gc
-
+from time import time
 import subprocess #debug
+import tqdm
+import csv
 
 
+# Since different videos may have different number of frames, we can't pass a batch of videos as a single
+# input Tensor to the model. We thus create the batch as a list, compute the forward pass one video at a time,
+# accumulate the loss and average it, before computing the backward pass.
+def my_collate(batch):
+    """
+    This custom collate function returns the batch where videos and labels are sorted in a list. This allows to have a
+    batch with videos of variable number of frames. This function is used by the dataloader internally.
+    :param batch: The batch returned by the dataset.
+    :return: A single batch (list), where the first element is a list of labels, and the second is a list of videos
+    """
+    labels = [item[0] for item in batch]
+    videos = [item[1] for item in batch]
+    return [labels, videos]
 
-# Note: for now we use a batch-size of 1.
 
+def run(args):
 
-def run_demo(args):
-    action_classes = [x.strip() for x in open('models/' + args.model + '/label_map.txt')]
-    num_samples = len(VideoDataset(root_dir='datasets/' + args.dataset, stream=args.stream, split=args.split))
-    if args.model == 'i3d':
-        model_class = I3D
+    torch.manual_seed(args.seed)
+    torch.cuda.manual_seed(args.seed)
+
+    # To avoid exceding the RAM limit when
+    max_frames_for_ram = 500
+    if args.batch_size == 1:
+        max_frames_per_clip = -1
     else:
-        pass
+        max_frames_per_clip = int(max_frames_for_ram / args.batch_size)
+
+    action_classes = [x.strip() for x in open('models/i3d/label_map.txt')]
+
+    # Datasets and dataloaders
+    train_dataset = VideoDataset(root_dir='datasets/' + args.dataset, split='train', stream=args.stream,
+                           max_frames_per_clip=max_frames_per_clip)
+
+    valid_dataset = VideoDataset(root_dir='datasets/' + args.dataset, split='valid', stream=args.stream,
+                                 max_frames_per_clip=-1)
+
+    test_dataset = VideoDataset(root_dir='datasets/' + args.dataset, split='test', stream=args.stream,
+                                 max_frames_per_clip=-1)
+
+    train_dataloader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=1,
+                           collate_fn=my_collate)
+    valid_dataloader = DataLoader(valid_dataset, batch_size=1, shuffle=True, num_workers=1,
+                                  collate_fn=my_collate)
+    test_dataloader = DataLoader(test_dataset, batch_size=1, shuffle=True, num_workers=1,
+                                  collate_fn=my_collate)
 
 
-    batch_size = 1 #debug
+    # Initializing model
+    model = I3D(num_classes=len(action_classes), modality=args.stream)
 
-    out_logits = np.zeros([num_samples, len(action_classes)])
-    truth_labels = np.zeros([num_samples,1])
-    truth_labels = VideoDataset(root_dir='datasets/' + args.dataset, split=args.split, stream=args.stream).get_labels()
+    # Initializing optimizer
+    optimizer = optim.SGD(model.parameters(), args.lr, momentum=args.momentum, dampening=0, weight_decay=0,
+                          nesterov=False)
 
-    np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + args.suffix + '.npz',
-             truth_labels=truth_labels,
-             out_logits=out_logits)
+    # Loading model and optimizer state
+    if args.resume_epoch == 0:
+        model.load_state_dict(torch.load('out/i3d/checkpoints/i3d_' + args.stream + '.pth'))
+        with open('out/i3d/saved_models/i3d_' + args.stream + '_train.csv', 'w') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Epoch', 'train_loss', 'train_acc', 'valid_loss', 'valid_acc'])
 
-    dataset = VideoDataset(root_dir='datasets/' + args.dataset, split=args.split, stream=args.stream, resize_frames=args.resize_frames)
-    model = model_class(num_classes=len(action_classes), modality=args.stream)
+    else:
+        checkpoint = torch.load('out/i3d/saved_models/i3d_' + args.stream + '_epoch_' + args.resume_epoch + '.pth')
+        model.load_state_dict(checkpoint['state_dict'])
+        optimizer.load_state_dict(checkpoint['opt_dict'])
 
 
-    lr = 0.1 # debug, set in arg parser
-    optimizer = optim.SGD(model.parameters(), lr, momentum=0, dampening=0, weight_decay=0, nesterov=False)
-
-    #param_vec = parameters_to_vector(model.parameters()) #debug
-    #torch.save(param_vec, 'param_evc.pkl') #debug
-    #print(param_vec.size())  #debug
-
-    #model.eval()
-
-    model.load_state_dict(torch.load('models/' + args.model + '/checkpoints/' + args.model + '_' + args.stream + '.pth'))
-
-    if torch.cuda.is_available():
-        device = torch.device('cuda')
+    # Loading model onto device
+    if torch.cuda.is_available() and args.device_type == 'gpu':
+        device = torch.device('cuda:' + str(args.gpu_id))
     else:
         device = torch.device('cpu')
     model.to(device)
-    #model.cuda()
 
-    model.train()
+    # NOTE: Calling model.train() seems to drastically affect the model prediction.
+    #model.train()
 
-    for idx in range(args.resume_iter, len(dataset)):
-        print("stream: " + args.stream + "   idx: " + str(idx))
+    for epoch in range(args.resume_epochs, args.num_epochs):
+        print("Epoch: " + str(epoch))
+        running_loss = 0.0
+        running_corrects = 0
 
-        if True: # lololo
-        #with torch.no_grad():
-            #input = torch.autograd.Variable(torch.from_numpy(dataset[idx]['video'].transpose(0, 4, 1, 2, 3))).cuda()
-            #input = torch.autograd.Variable(torch.from_numpy(dataset[idx]['video'].transpose(0, 4, 1, 2, 3))).to(device) #debug
+        for batch_idx, batch in enumerate(train_dataloader):
 
+            for sample_idx in range(args.batch_size):
 
-            print("*** Getting video sequence... ***") #debug
-            label, video = dataset[idx]
-            print("*** Transforming video sequence and loading onto GPU, if available... ***")  # debug
-            video = torch.autograd.Variable(torch.from_numpy(video.transpose(0, 4, 1, 2, 3))).to(device)
+                label = batch[0][sample_idx]
+                video = batch[1][sample_idx]
+                video = torch.autograd.Variable(torch.from_numpy(video.transpose(0, 4, 1, 2, 3))).to(device)
+                target = torch.tensor([action_classes.index(label)], dtype=torch.long, device=device)
 
-            target = torch.tensor([action_classes.index(label)], dtype=torch.long, device=device)
+                optimizer.zero_grad()
+                out_var, logits = model(video)
+                loss = F.cross_entropy(input=out_var, target=target)
 
-            print("*** Computing forward pass... ***")  # debug
-            out_var, logits = model(video)
+                running_loss += loss.item()
+                running_corrects += target.data.cpu().item() == torch.argmax(out_var).cpu().item()
+                #print("Target: " + label + " Prediction: " + action_classes[torch.argmax(out_var)])
 
-            print("*** Computing loss... ***")  # debug
-            loss = F.cross_entropy(input=out_var, target=target)  # debug
-            optimizer.zero_grad()
-
-            print("*** Computing backward pass... ***")  # debug
+            loss /= args.batch_size
             loss.backward()
-            print("*** Optimizer step... ***")  # debug
             optimizer.step()
 
-            print("OKKKKK") #debug
-            #sys.exit() #debug
+            if batch_idx % 10 == 0:
+                completion = 100 * int(batch_idx+1 * args.batch_size / len(train_dataset))
+                current_loss = running_loss / (batch_idx+1 * args.batch_size / len(train_dataset))
+                current_acc = running_corrects / (batch_idx+1 * args.batch_size / len(train_dataset))
+                print("[Train] Epoch: {}/{} Epoch completion: {} % Loss: {} Acc: {}".format(epoch, args.num_epochs,
+                                                                                            completion, current_loss,
+                                                                                            current_acc))
 
+        train_loss = running_loss / len(train_dataset)
+        train_acc = running_corrects / len(train_dataset)
+
+        torch.save({
+            'epoch': epoch,
+            'state_dict': model.state_dict(),
+            'opt_dict': optimizer.state_dict(),
+        }, 'out/i3d/saved_models/i3d_' + args.stream + '_epoch_' + epoch + '.pth')
+        print("Saving model...")
+
+        running_loss = 0.0
+        running_corrects = 0
+
+        print("[Train] Epoch: {}/{} Loss: {} Acc: {}".format(epoch, args.num_epochs, train_loss, train_acc))
+
+        for batch_idx, batch in enumerate(valid_dataloader):
+
+            label = batch[0][0]
+            video = batch[1][0]
+            video = torch.autograd.Variable(torch.from_numpy(video.transpose(0, 4, 1, 2, 3))).to(device)
+            target = torch.tensor([action_classes.index(label)], dtype=torch.long, device=device)
+            with torch.no_grad():
+                out_var, logits = model(video)
+            loss = F.cross_entropy(input=out_var, target=target)
+            running_loss += loss.item()
+            running_corrects += target.data.cpu().item() == torch.argmax(out_var).cpu().item()
+
+        valid_loss = running_loss / len(train_dataset)
+        valid_acc = running_corrects / len(train_dataset)
+        print("[Valid] Epoch: {}/{} Loss: {} Acc: {}".format(epoch, args.num_epochs, valid_loss, valid_acc))
+
+        with open('out/i3d/saved_models/i3d_' + args.stream + '_train.csv', 'a') as f:
+            writer = csv.writer(f)
+            writer.writerow([epoch, train_loss, train_acc, valid_loss, valid_acc])
+
+    running_loss = 0.0
+    running_corrects = 0
+
+    for batch_idx, batch in enumerate(test_dataloader):
+        label = batch[0][0]
+        video = batch[1][0]
+        video = torch.autograd.Variable(torch.from_numpy(video.transpose(0, 4, 1, 2, 3))).to(device)
+        target = torch.tensor([action_classes.index(label)], dtype=torch.long, device=device)
+        with torch.no_grad():
+            out_var, logits = model(video)
+        loss = F.cross_entropy(input=out_var, target=target)
+        running_loss += loss.item()
+        running_corrects += target.data.cpu().item() == torch.argmax(out_var).cpu().item()
+
+    test_loss = running_loss / len(train_dataset)
+    test_acc = running_corrects / len(train_dataset)
+
+    print("*****************************************")
+    print("[Test] Epoch: {}/{} Loss: {} Acc: {}".format(epoch, args.num_epochs, test_loss, test_acc))
+
+    with open('out/i3d/saved_models/i3d_' + args.stream + '_test.csv', 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Epoch', 'test_loss', 'test_acc'])
+        writer.writerow([epoch, test_loss, test_acc])
 
     # Clearing GPU cache and clearing model from memory
     torch.cuda.empty_cache()
     model = None
     gc.collect()
-    np.savez('out/' + args.model + '/' + args.model + '-' + args.dataset + '-' + args.stream + args.suffix + '.npz',
-             truth_labels=truth_labels, 
-             out_logits=out_logits) 
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser('Evaluating the I3D model, and possible variants, on video datasets')
-    # TODO: eventually, we will want to evaluate models on various possible checkpoints, thus add an argument for specific checkpoints
-
-    parser.add_argument(
-        '--model',
-        type=str,
-        default='i3d',
-        choices=['i3d'],
-        help='Model to use')
-    parser.add_argument(
-        '--stream',
-        type=str,
-        default='rgb',
-        choices=['rgb', 'flow'],
-        help='Input stream for model')
-    parser.add_argument(
-        '--resize_frames',
-        type=float,
-        default=1.0,
-        help='Factor for resizing frames')
-    parser.add_argument(
-        '--split',
-        type=str,
-        default='test',
-        choices=['test', 'valid', 'train'],
-        help='Dataset split')
-    parser.add_argument(
-        '--pre-trained',
-        type=str,
-        default='both',
-        #choices=['rgb', 'flow', 'both', 'none']
-        # Since this is an evaluation script, we have to load pre-trained weights, but use the line above for a training script
-        choices=['both'],
-        help='Whether to use pre-trained weights (from Kinetics-400)')
-    parser.add_argument(
-        '--dataset',
-        type=str,
-        default='ViolentHumanActions_v2',
-        help='Name of dataset to use')
-    parser.add_argument(
-        '--suffix',
-        type=str,
-        default='',
-        help='Suffix to append to results file')
-
-    parser.add_argument(
-        '--resume_iter',
-        type=int,
-        default=0,
-        help='Iteration or sample index at which to resume, if resuming an interrupted evaluation')
-
-
-    args = parser.parse_args()
-
-    run_demo(args)
+    args = get_args()
+    run(args)

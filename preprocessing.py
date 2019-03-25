@@ -4,41 +4,40 @@ import time
 import argparse
 import os
 import math
+import sys
+import torch
+import torchvision
+import PIL
 
 
+def get_video_property(file_path, cap_prop_id):
+    """
+    Returns an information specified by an OpenCV cosntant, for a given video.(
+    see https://docs.opencv.org/3.4/d4/d15/group__videoio__flags__base.html)
+    Examples: cv2.CAP_PROP_FRAME_WIDTH, cv2.CAP_PROP_FPS, cv2.CAP_PROP_FRAME_COUNT
 
-def preprocess_rgb(file_path, resize_frames=1.0):        
+    :param file_path: path to video file
+    :param cap_prop_id: VideoCapture generic properties identifier.
+    :return: the specified video capture property
+    """
     cap = cv2.VideoCapture(file_path)
-    time.sleep(2)
-    
-    # videos from UCF101 are all at 25 FPS, so no need to resample. For Kinetics, use ffmpeg to resample before.
+    return cap.get(cap_prop_id)
+
+
+def preprocess_rgb(file_path, max_frames_per_clip=-1):
+
+    cap = cv2.VideoCapture(file_path)
+    time.sleep(0.01)
+
     frame_width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
     frame_height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 
-    frame_rate = cap.get(cv2.CAP_PROP_FPS)
-    frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
+    if max_frames_per_clip == -1 or max_frames_per_clip > cap.get(cv2.CAP_PROP_FRAME_COUNT):
+        frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
+    else:
+        frame_count = max_frames_per_clip
 
-    print ("RGB - ORIGINAL FRAME COUNT= " + str(frame_count))
-    print ("RGB - ORIGINAL FRAME RATE= " + str(frame_rate))
-
-    '''
-    #change frame count if video to be resampled
-    cap.set(cv2.CAP_PROP_FPS, frame_rate//2)
-    cap.set(cv2.CAP_PROP_FRAME_COUNT, frame_count//2)
-
-    frame_rate = cap.get(cv2.CAP_PROP_FPS)
-    frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
-
-    time.sleep(2)
-
-  
-    print ("RGB - FRAME COUNT= " + str(frame_count))
-    print ("RGB - FRAME RATE= " + str(frame_rate))
-    '''
-
-
-    
-    #Resized frame width and height so that the smallest dimension is 256 pixels
+    # Resized frame width and height so that the smallest dimension is 256 pixels
     if frame_width < frame_height:
         frame_width_resize = 256
         frame_height_resize = np.round(frame_height * np.true_divide(256.0, frame_width))
@@ -46,128 +45,97 @@ def preprocess_rgb(file_path, resize_frames=1.0):
         frame_height_resize = 256
         frame_width_resize = np.round(frame_width * np.true_divide(256.0, frame_height))
 
-    frame_width_resize = math.floor(frame_width_resize * resize_frames)
-    frame_height_resize = math.floor(frame_height_resize * resize_frames)
-        
-
-    #Numpy array for the processed frame sequence
+    # Numpy array for the processed frame sequence
     buf = np.empty((1, int(frame_count), int(frame_height_resize), int(frame_width_resize), 3), np.dtype('float32'))
-    # iterator throught the buffer
-    fc = 0
+    #buf = torch.empty((1, int(frame_count), int(frame_height_resize), int(frame_width_resize), 3), dtype=torch.float, device=torch.device('cuda:0'))
 
+    # Iterator through the buffer
+    fc = 0
     ret = True
-    #using 0-based index of the frame to be decoded/captured next
-    while(cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count and ret == True):
-        ret, frame = cap.read()            
-        if ret == True:
-            #Resizing frame with bilinear interpolation
+
+    while cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count and ret is True:
+        ret, frame = cap.read()
+        if ret:
+            # Resizing frame with bilinear interpolation
             frame_resized = cv2.resize(frame, (int(frame_width_resize), int(frame_height_resize)), interpolation = cv2.INTER_LINEAR)
-    
-            #Pixel values are then rescaled between -1 and 1
-            frame_rescaled = np.true_divide(frame_resized, 255.0)*2.0 - 1.0
+
+            # Pixel values are then rescaled between -1 and 1
+            frame_rescaled = np.true_divide(frame_resized, 255.0) * 2.0 - 1.0
+
             buf[0, fc] = np.float32(frame_rescaled)
-            fc += 1                    
+
+            fc += 1
+
     cap.release()
 
-    #central 224x224 pixel crop
+    # Central crop of 224x224 pixels
     crop_side = 224
-    crop_side = math.floor(crop_side * resize_frames)
     top = np.int(np.round((frame_height_resize-crop_side)/2))
     left = np.int(np.round((frame_width_resize-crop_side)/2))
-    return buf[:,0:fc, top:top+crop_side, left:left+crop_side, :]
-    
-    
-    
 
-def preprocess_flow(file_path, resize_frames=1.0):
+    return buf[:, 0:fc, top:top+crop_side, left:left+crop_side, :]
+
+
+def preprocess_flow(file_path, max_frames_per_clip=-1):
     cap = cv2.VideoCapture(file_path)
-    time.sleep(2)
-    
-    # videos from UCF101 are all at 25 FPS, so no need to resample. For Kinetics, use ffmpeg to resample before.
-    
+    time.sleep(0.01)
+
     frame_width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
     frame_height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 
-
-    frame_rate = cap.get(cv2.CAP_PROP_FPS)
-    frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
-
-    print ("FLOW - ORIGINAL FRAME COUNT= " + str(frame_count))
-    print ("FLOW - ORIGINAL FRAME RATE= " + str(frame_rate))
-
-    '''
-    #change frame count if video to be resampled
-    cap.set(cv2.CAP_PROP_FPS, frame_rate//2)
-    cap.set(cv2.CAP_PROP_FRAME_COUNT, frame_count//2)
-
-    frame_rate = cap.get(cv2.CAP_PROP_FPS)
-    frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
-
-    time.sleep(2)
-
-  
-    print ("FLOW - FRAME COUNT= " + str(frame_count))
-    print ("FLOW - FRAME RATE= " + str(frame_rate))
-    '''
+    if max_frames_per_clip == -1 or max_frames_per_clip > cap.get(cv2.CAP_PROP_FRAME_COUNT):
+        frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
+    else:
+        frame_count = max_frames_per_clip
     
-    
-    #Resized frame width and height so that the smallest dimension is 256 pixels
+    # Resized frame width and height so that the smallest dimension is 256 pixels
     if frame_width < frame_height:
         frame_width_resize = 256
         frame_height_resize = np.round(frame_height * np.true_divide(256.0, frame_width))
     elif frame_height < frame_width:
         frame_height_resize = 256
         frame_width_resize = np.round(frame_width * np.true_divide(256.0, frame_height))
-    
-    frame_width_resize = math.floor(frame_width_resize * resize_frames)
-    frame_height_resize = math.floor(frame_height_resize * resize_frames)
-    
-    
+
     ret, frame1 = cap.read()
-    prvs = cv2.cvtColor(frame1,cv2.COLOR_BGR2GRAY)
-    prvs_resized = cv2.resize(prvs, (int(frame_width_resize), int(frame_height_resize)), interpolation = cv2.INTER_LINEAR) 
+    prvs = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
+    prvs_resized = cv2.resize(prvs, (int(frame_width_resize), int(frame_height_resize)), interpolation=cv2.INTER_LINEAR)
     
-    frame1_resized = cv2.resize(frame1, (int(frame_width_resize), int(frame_height_resize)), interpolation = cv2.INTER_LINEAR) 
+    frame1_resized = cv2.resize(frame1, (int(frame_width_resize), int(frame_height_resize)), interpolation=cv2.INTER_LINEAR)
     hsv = np.zeros_like(frame1_resized)
-    hsv[...,1] = 255
+    hsv[..., 1] = 255
     
-    #Numpy array for the processed frame sequence
+    # Numpy array for the processed frame sequence
     buf = np.empty((1, int(frame_count), int(frame_height_resize), int(frame_width_resize), 2), np.dtype('float32'))
-    # iterator throught the buffer
+    # Iterator through the buffer
     fc = 0
     
     ret = True
-    #using 0-based index of the frame to be decoded/captured next
     # DEBUGGING: here we force the sequence to have a low number of frames
     frame_count = 50 # debug : REMOVE WHEN DONE!
-    while(cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count and ret == True):
+    while cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count and ret is True:
         ret, frame2 = cap.read()
-        
-        if ret == True:
-            next = cv2.cvtColor(frame2,cv2.COLOR_BGR2GRAY)
-            next_resized = cv2.resize(next, (int(frame_width_resize), int(frame_height_resize)), interpolation = cv2.INTER_LINEAR) 
+        if ret:
+            next_frame = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
+            next_resized = cv2.resize(next_frame, (int(frame_width_resize), int(frame_height_resize)), interpolation=cv2.INTER_LINEAR)
     
-            #Computing dense optical flow from the previous to the current frame. The flow has 2 channels. Cliping the values
-            #to the range [-20, 20]. Rescaling to the range [-1, 1].
-
-            # DEBUGGING: uncomment next line if doesn't work
-            #flow = np.divide(np.clip(cv2.calcOpticalFlowFarneback(prvs_resized,next_resized, None, 0.5, 3, 15, 3, 5, 1.2, 0), -20.0, 20.0), 20.0)
-            dtvl1 = cv2.createOptFlow_DualTVL1() #debug
+            # Computing dense optical flow using TV-L1 algorithm (Zach et al., 2007)
+            # based on implementation of (Sanchez et al., 2011)
+            dtvl1 = cv2.createOptFlow_DualTVL1()
             print("computing flow: " + str(fc)) #debug
             flow_frame = dtvl1.calc(prvs_resized, next_resized, None)
-            flow = np.divide(np.clip(flow_frame, -20.0, 20.0), 20.0) #debug
 
-            #for representation of the optical flow, but actually need to work with 2-channel (vertical and horizontal) flow fields.
+            # Clipping between -20 and 20, then rescaling between -1 and 1.
+            flow = np.divide(np.clip(flow_frame, -20.0, 20.0), 20.0)
+
+            # Adding frame of optical flow field to the buffer.
             buf[0, fc] = np.float32(flow)
             fc += 1
             prvs_resized = next_resized
         
     cap.release()
-    
-    
-    #central 224x224 pixel crop
+
+    # central 224x224 pixel crop
     crop_side = 224
-    crop_side = math.floor(crop_side * resize_frames)
     top = np.int(np.round((frame_height_resize-crop_side)/2))
     left = np.int(np.round((frame_width_resize-crop_side)/2))
-    return buf[:,0:fc, top:top+crop_side, left:left+crop_side, :]
+    return buf[:, 0:fc, top:top+crop_side, left:left+crop_side, :]
