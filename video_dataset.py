@@ -45,13 +45,20 @@ class VideoDataset(Dataset):
     def __getitem__(self, idx):
         video_filename = self.csv_data[idx][1]
         label = self.csv_data[idx][0]
-
+        video = dict()
         if self.stream == 'rgb':
-            video = preprocess_rgb(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename,
+            video['rgb'] = preprocess_rgb(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename,
                                    max_frames_per_clip=self.max_frames_per_clip)
 
-        if self.stream == 'flow':
-            video = preprocess_flow(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename,
+        elif self.stream == 'flow':
+            video['flow'] = preprocess_flow(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename,
+                                    max_frames_per_clip=self.max_frames_per_clip)
+
+        elif self.stream == 'dual':
+
+            video['rgb'] = preprocess_rgb(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename,
+                                   max_frames_per_clip=self.max_frames_per_clip)
+            video['flow'] = preprocess_flow(self.root_dir + '/data/' + self.split + '/' + label + '/' + video_filename,
                                     max_frames_per_clip=self.max_frames_per_clip)
 
         return label, video

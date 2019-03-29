@@ -10,20 +10,6 @@ import torchvision
 import PIL
 
 
-def get_video_property(file_path, cap_prop_id):
-    """
-    Returns an information specified by an OpenCV cosntant, for a given video.(
-    see https://docs.opencv.org/3.4/d4/d15/group__videoio__flags__base.html)
-    Examples: cv2.CAP_PROP_FRAME_WIDTH, cv2.CAP_PROP_FPS, cv2.CAP_PROP_FRAME_COUNT
-
-    :param file_path: path to video file
-    :param cap_prop_id: VideoCapture generic properties identifier.
-    :return: the specified video capture property
-    """
-    cap = cv2.VideoCapture(file_path)
-    return cap.get(cap_prop_id)
-
-
 def preprocess_rgb(file_path, max_frames_per_clip=-1):
 
     cap = cv2.VideoCapture(file_path)
@@ -87,6 +73,15 @@ def preprocess_flow(file_path, max_frames_per_clip=-1):
         frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
     else:
         frame_count = max_frames_per_clip
+
+    # IMPORTANT: Processing takes too long, therefore videos are only captured for 50 frames!
+    if cap.get(cv2.CAP_PROP_FRAME_COUNT) > 75:
+        frame_count = 75
+    else:
+        frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
+
+    # Setting video to full length
+    frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
     
     # Resized frame width and height so that the smallest dimension is 256 pixels
     if frame_width < frame_height:
@@ -111,7 +106,6 @@ def preprocess_flow(file_path, max_frames_per_clip=-1):
     
     ret = True
     # DEBUGGING: here we force the sequence to have a low number of frames
-    frame_count = 50 # debug : REMOVE WHEN DONE!
     while cap.get(cv2.CAP_PROP_POS_FRAMES) < frame_count and ret is True:
         ret, frame2 = cap.read()
         if ret:
@@ -121,7 +115,14 @@ def preprocess_flow(file_path, max_frames_per_clip=-1):
             # Computing dense optical flow using TV-L1 algorithm (Zach et al., 2007)
             # based on implementation of (Sanchez et al., 2011)
             dtvl1 = cv2.createOptFlow_DualTVL1()
-            print("computing flow: " + str(fc)) #debug
+            #print("computing flow: " + str(fc)) #debug
+
+            sys.stdout.write('\r')
+            # the exact output you're looking for:
+            sys.stdout.write(
+                "[%-100s] %d%%" % ('=' * int(100 * (fc + 1) / (frame_count - 1)), int(100 * (fc + 1) / (frame_count - 1))))
+            sys.stdout.flush()
+
             flow_frame = dtvl1.calc(prvs_resized, next_resized, None)
 
             # Clipping between -20 and 20, then rescaling between -1 and 1.
@@ -131,11 +132,18 @@ def preprocess_flow(file_path, max_frames_per_clip=-1):
             buf[0, fc] = np.float32(flow)
             fc += 1
             prvs_resized = next_resized
-        
+
+    # Releasing video capture
     cap.release()
+    # To reset output at beginning of line
+    sys.stdout.write('\n')
+    sys.stdout.flush()
 
     # central 224x224 pixel crop
     crop_side = 224
     top = np.int(np.round((frame_height_resize-crop_side)/2))
     left = np.int(np.round((frame_width_resize-crop_side)/2))
+
+    #torch.save(torch.from_numpy(buf[:, 0:fc, top:top+crop_side, left:left+crop_side, :]), 'flow_clip.pkl') #debug
+    #sys.exit() #debug
     return buf[:, 0:fc, top:top+crop_side, left:left+crop_side, :]
