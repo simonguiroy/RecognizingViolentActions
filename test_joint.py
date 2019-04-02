@@ -11,8 +11,8 @@ def run(args):
     # List of action class labels
     action_classes = [x.strip() for x in open('models/i3d/label_map.txt')]
 
-    rgb_outputs = torch.load(args.rgb_preds_file)
-    flow_outputs = torch.load(args.flow_preds_file)
+    rgb_outputs = torch.load(args.rgb_preds_path)
+    flow_outputs = torch.load(args.flow_preds_path)
 
     rgb_preds = rgb_outputs['preds']
     flow_preds = flow_outputs['preds']
@@ -20,7 +20,7 @@ def run(args):
     rgb_indices = rgb_outputs['shuffled_indices']
     flow_indices = flow_outputs['shuffled_indices']
 
-    test_dataset = VideoDataset(root_dir='datasets/' + args.dataset, split='test', stream=args.stream,
+    test_dataset = VideoDataset(root_dir='datasets/' + args.dataset, split='test',
                                  max_frames_per_clip=-1)
 
     target_labels = test_dataset.get_labels()
@@ -28,10 +28,11 @@ def run(args):
     running_corrects_rgb = 0
     running_corrects_flow = 0
     running_corrects_joint = 0
-    for idx in range(rgb_indices):
-
+    max_num_preds = max(len(rgb_preds), len(flow_preds))
+    for idx in range(max_num_preds):
+        print(idx) #debug
         rgb_pred = rgb_preds[idx]
-        rgb_index = rgb_indices[idx]
+        rgb_index = rgb_indices[idx].item()
         flow_index = np.where(flow_indices.numpy() == rgb_index)[0][0]
         flow_pred = flow_preds[flow_index]
 
@@ -46,14 +47,14 @@ def run(args):
         print("Target: " + label + " Predictions --  [RGB]: " + action_classes[torch.argmax(rgb_pred)] + " [FLOW]: " +
               action_classes[torch.argmax(flow_pred)] + " [JOINT]: " + action_classes[torch.argmax(joint_pred)])
 
-    rgb_acc = running_corrects_rgb / len(test_dataset)
-    flow_acc = running_corrects_flow / len(test_dataset)
-    joint_acc = running_corrects_joint / len(test_dataset)
+    rgb_acc = running_corrects_rgb / len(rgb_preds)
+    flow_acc = running_corrects_flow / len(flow_preds)
+    joint_acc = running_corrects_joint / len(flow_preds)
 
     print("*****************************************")
-    print("Test Completed! Accuracies --  [RGB]: " + rgb_acc + " [FLOW]: " +
-          flow_acc + " [JOINT]: " + joint_acc)
-    with open('out/i3d/logs/joint-test_' + args.rgb_preds_file + '___' + args.flow_preds_file + '.csv', 'w') as f:
+    print("Test Completed! Accuracies --  [RGB]: " + str(rgb_acc) + " [FLOW]: " +
+          str(flow_acc) + " [JOINT]: " + str(joint_acc))
+    with open('out/i3d/logs/' + args.output_file, 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['RGB_Acc', 'Flow_Acc', 'Joint_Acc'])
         writer.writerow([rgb_acc, flow_acc, joint_acc])
@@ -62,8 +63,10 @@ def run(args):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Recognizing Violent Human Actions')
-    parser.add_argument('--rgb_preds_file', type=str, help='Filepath to RGB predictions')
-    parser.add_argument('--flow_preds_file', type=str, help='Filepath to Optical Flow predictions')
+    parser.add_argument('--rgb_preds_path', type=str, help='Path to .pkl file with RGB predictions')
+    parser.add_argument('--flow_preds_path', type=str, help='Path to .pkl file with Optical Flow predictions')
+    parser.add_argument('--dataset', type=str, default='ViolentHumanActions_v2', help='Name of dataset to use')
+    parser.add_argument('--output_file', type=str, help='Name of .csv output file to save test performance results')
     args = parser.parse_args()
 
     run(args)
