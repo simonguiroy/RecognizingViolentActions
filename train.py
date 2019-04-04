@@ -3,11 +3,12 @@ from video_dataset import VideoDataset
 import torch
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from models import *
+from models.i3d.i3d import I3D
 from parser import get_args
 import sys
-import subprocess #debug
+import subprocess
 import csv
+import math
 from video_dataset import my_collate, DeterministicSubsetRandomSampler
 
 
@@ -67,7 +68,12 @@ def run(args):
     if args.resume_epoch == 0:
         with open('out/i3d/logs/i3d_' + args.stream + '_train.csv', 'w') as f:
             writer = csv.writer(f)
-            writer.writerow(['Epoch', 'train_loss', 'train_acc', 'valid_loss', 'valid_acc'])
+            writer.writerow(['Epoch', 'iter', 'train_loss', 'train_acc', 'valid_loss', 'valid_acc'])
+
+    with open('failed_videos.csv', 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['batch_idx', 'sample_idx'])
+
 
     # Datasets and dataloaders
     train_dataset = VideoDataset(root_dir='datasets/' + args.dataset, split='train', stream=args.stream,
@@ -75,6 +81,7 @@ def run(args):
 
     train_dataloader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=False, num_workers=0,
                            collate_fn=my_collate, sampler=train_sampler)
+    num_train_iters = math.ceil(len(train_dataset) / args.batch_size)
 
     valid_dataset = VideoDataset(root_dir='datasets/' + args.dataset, split='valid', stream=args.stream,
                                  max_frames_per_clip=-1)
@@ -102,6 +109,7 @@ def run(args):
 
             # Computing batch loss with one forward pass at a time, since videos may have different lengths
             batch_loss = 0.0
+            true_batch_size = 0
             for sample_idx in range(args.batch_size):
 
                 label = batch[0][sample_idx]
@@ -110,35 +118,54 @@ def run(args):
                 target = torch.tensor([action_classes.index(label)], dtype=torch.long, device=device)
 
                 optimizer.zero_grad()
-                out_var, logits = model(video)
-                out_var = out_var
-                loss = criterion(out_var, target)
+                try:
+                    out_var, logits = model(video)
+                    true_batch_size += 1
+                except:
+                    print('Failed to compute forward pass on video!')
+                    with open('failed_videos.csv', 'a') as f:
+                        writer = csv.writer(f)
+                        writer.writerow([batch_idx, sample_idx])
 
+                loss = criterion(out_var, target)
                 batch_loss += loss
                 running_loss += loss.item()
                 running_corrects += target.data.cpu().item() == torch.argmax(out_var).cpu().item()
                 print('')
                 print("Stream: " + args.stream + " Target: " + label + " Prediction: " + action_classes[torch.argmax(out_var)])
 
-            batch_loss /= args.batch_size
+            batch_loss /= true_batch_size
             batch_loss.backward()
             optimizer.step()
 
-            # Printing running accuracy and loss for every 10 batch
-            if batch_idx % 10 == 0 and batch_idx > 0:
+            # Printing running accuracy and loss for specified log frequency
+            if batch_idx % args.log_frequency == 0 and args.log_frequency != -1 and batch_idx > 0:
                 completion = ((batch_idx+1) * args.batch_size / len(train_dataset))
                 current_loss = running_loss / ((batch_idx+1) * args.batch_size)
                 current_acc = running_corrects / ((batch_idx+1) * args.batch_size)
                 print("[Train] Epoch: {}/{} Epoch completion: {} Loss: {} Acc: {}".format(epoch, args.num_epochs,
                                                                                             completion, current_loss,
                                                                                             current_acc))
-                sys.exit() #debug
+                # Writing training results in log file
+                with open('out/i3d/logs/i3d_' + args.stream +
+                          '_train.csv', 'a') as f:
+                    writer = csv.writer(f)
+                    writer.writerow([epoch, batch_idx + (epoch * num_train_iters), current_loss, current_acc, -1, -1])
+
+                # Saving model
+                torch.save({
+                    'epoch': epoch,
+                    'state_dict': model.state_dict(),
+                    'args': args,
+                    'train_sampler': train_sampler
+                }, 'out/i3d/saved_models/i3d_' + args.stream + '_epoch-' + str(epoch) + '_iter-' + str(batch_idx) + '.pkl')
+                print("Saving model...")
 
         train_loss = running_loss / len(train_dataset)
         train_acc = running_corrects / len(train_dataset)
         print("[Train] Epoch: {}/{} Loss: {} Acc: {}".format(epoch, args.num_epochs, train_loss, train_acc))
 
-        # At every end of epoch, saving model and optimizer state to checkpoint
+        # At every end of epoch, saving model.
         torch.save({
             'epoch': epoch + 1,
             'state_dict': model.state_dict(),
@@ -168,7 +195,7 @@ def run(args):
         # Writing training and validation results in log file
         with open('out/i3d/logs/i3d_' + args.stream + '_train.csv', 'a') as f:
             writer = csv.writer(f)
-            writer.writerow([epoch, train_loss, train_acc, valid_loss, valid_acc])
+            writer.writerow([epoch + 1, (epoch + 1) * num_train_iters, train_loss, train_acc, valid_loss, valid_acc])
 
 
 if __name__ == "__main__":

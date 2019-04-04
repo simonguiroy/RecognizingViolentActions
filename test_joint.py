@@ -1,7 +1,6 @@
 import numpy as np
 from video_dataset import VideoDataset
 import torch
-from models import *
 import csv
 import argparse
 
@@ -20,6 +19,11 @@ def run(args):
     rgb_indices = rgb_outputs['shuffled_indices']
     flow_indices = flow_outputs['shuffled_indices']
 
+    rgb_pred_indices = rgb_indices[0:len(rgb_preds)]
+    flow_pred_indices = flow_indices[0:len(flow_preds)]
+
+    common_pred_indices = list(set(rgb_pred_indices.tolist()).intersection(set(flow_pred_indices.tolist())))
+
     test_dataset = VideoDataset(root_dir='datasets/' + args.dataset, split='test',
                                  max_frames_per_clip=-1)
 
@@ -28,15 +32,12 @@ def run(args):
     running_corrects_rgb = 0
     running_corrects_flow = 0
     running_corrects_joint = 0
-    max_num_preds = max(len(rgb_preds), len(flow_preds))
-    for idx in range(max_num_preds):
-        print(idx) #debug
-        rgb_pred = rgb_preds[idx]
-        rgb_index = rgb_indices[idx].item()
-        flow_index = np.where(flow_indices.numpy() == rgb_index)[0][0]
-        flow_pred = flow_preds[flow_index]
 
-        label = target_labels[rgb_index]
+    for video_idx in common_pred_indices:
+        rgb_pred = rgb_preds[np.where(rgb_indices.numpy() == video_idx)[0][0]]
+        flow_pred = flow_preds[np.where(flow_indices.numpy() == video_idx)[0][0]]
+
+        label = target_labels[video_idx]
         target = torch.tensor([action_classes.index(label)], dtype=torch.long)
 
         joint_pred = 0.5 * (rgb_pred + flow_pred)
@@ -47,9 +48,9 @@ def run(args):
         print("Target: " + label + " Predictions --  [RGB]: " + action_classes[torch.argmax(rgb_pred)] + " [FLOW]: " +
               action_classes[torch.argmax(flow_pred)] + " [JOINT]: " + action_classes[torch.argmax(joint_pred)])
 
-    rgb_acc = running_corrects_rgb / len(rgb_preds)
-    flow_acc = running_corrects_flow / len(flow_preds)
-    joint_acc = running_corrects_joint / len(flow_preds)
+    rgb_acc = running_corrects_rgb / len(common_pred_indices)
+    flow_acc = running_corrects_flow / len(common_pred_indices)
+    joint_acc = running_corrects_joint / len(common_pred_indices)
 
     print("*****************************************")
     print("Test Completed! Accuracies --  [RGB]: " + str(rgb_acc) + " [FLOW]: " +

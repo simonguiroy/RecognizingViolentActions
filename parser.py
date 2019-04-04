@@ -11,6 +11,8 @@ def get_args():
     parser.add_argument('--momentum', type=float, default=0.9, help='Momentum to use with SGD optimizer.')
     parser.add_argument('--num_epochs', type=int, default=10, help='Number training epoch.')
     parser.add_argument('--resume_epoch', type=int, default=0, help='Resume training at given epoch.')
+    parser.add_argument('--log_frequency', type=int, default=-1, help='Log train results and save model at '
+                                                                      'every N batch. If -1, at every end of epoch.')
     parser.add_argument('--multistep_lr_schedule', type=list, default=[],
                         help='Initial lr decayed by gamma once '
                              'the number of epoch reaches one of the milestones. '

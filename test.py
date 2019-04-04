@@ -2,15 +2,21 @@ import numpy as np
 from video_dataset import VideoDataset
 import torch
 from torch.utils.data import DataLoader
-from models import *
-from parser import get_args
+from models.i3d.i3d import I3D
 import sys
 import csv
+import argparse
 from video_dataset import my_collate, DeterministicSubsetRandomSampler
 
 
 def run(args):
-    # TODO: Since we will save model predictions, seeding here must be based on previous testing runs.
+
+    saved_model_name = test_args.saved_model_path.split('/')[-1].split('.pkl')[0]
+    # Loading checkpoint of saved model
+    checkpoint = torch.load(test_args.saved_model_path)
+    # Retrieving training arguments
+    args = checkpoint['args']
+
     # Seeding random number generators to have determinism and reproducibility
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed(args.seed)
@@ -20,9 +26,6 @@ def run(args):
 
     # List of action class labels
     action_classes = [x.strip() for x in open('models/i3d/label_map.txt')]
-
-    # Loading checkpoint for specified epoch
-    checkpoint = torch.load('out/i3d/saved_models/i3d_' + args.stream + '_epoch-' + str(args.resume_epoch) + '.pkl')
 
     # Initializing model
     model = I3D(num_classes=len(action_classes), modality=args.stream)
@@ -62,7 +65,7 @@ def run(args):
             out_var, logits = model(video)
         preds.append(out_var.cpu())
         torch.save({'preds': preds, 'shuffled_indices': test_sampler.shuffled_indices}, 'out/i3d/preds/preds_' +
-                   args.stream + '_epoch-' + str(args.resume_epoch) + '.pkl')
+                   saved_model_name + '.pkl')
         running_loss += criterion(out_var, target).item()
         running_corrects += target.data.cpu().item() == torch.argmax(out_var).cpu().item()
         print('')
@@ -76,7 +79,7 @@ def run(args):
             print("[Test] Completion: {} Loss: {} Acc: {}".format(completion, current_loss, current_acc))
 
             # Overwriting log file every ten sample
-            with open('out/i3d/logs/i3d_' + args.stream + '_epoch-' + args.resume_epoch + '_test.csv', 'w') as f:
+            with open('out/i3d/logs/' + saved_model_name + '_test.csv', 'w') as f:
                 writer = csv.writer(f)
                 writer.writerow(['Epoch', 'test_loss', 'test_acc'])
                 writer.writerow([args.resume_epoch, current_loss, current_acc])
@@ -87,12 +90,16 @@ def run(args):
     print("*****************************************")
     print("[Test] Completed! Loss: {} Acc: {}".format(test_loss, test_acc))
 
-    with open('out/i3d/logs/i3d_' + args.stream + '_test.csv', 'w') as f:
+    with open('out/i3d/logs/' + saved_model_name + '_test.csv', 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['Epoch', 'test_loss', 'test_acc'])
         writer.writerow([args.resume_epoch, test_loss, test_acc])
 
 
 if __name__ == "__main__":
-    args = get_args()
-    run(args)
+
+    parser = argparse.ArgumentParser(description='Recognizing Violent Human Actions')
+    parser.add_argument('--saved_model_path', type=str, help='Path to saved model to test.')
+    test_args = parser.parse_args()
+
+    run(test_args)

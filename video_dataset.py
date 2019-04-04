@@ -1,14 +1,14 @@
 from numpy import genfromtxt
 from torch.utils.data import Dataset
-#from preprocessing import preprocess_rgb, preprocess_flow
 from preprocessing import preprocess_video
 import torch
+import sys
 
 
 class VideoDataset(Dataset):
     """Dataset of video sequences, pre-processed as numpy arrays for rgb and optical-flow stream"""
 
-    def __init__(self,root_dir, stream='rgb', split='train', max_frames_per_clip=-1):
+    def __init__(self, root_dir, stream='rgb', split='train', max_frames_per_clip=-1):
         """
         :param root_dir: Root directory of the dataset
         :param stream: Type of stream for model input [rgb/flow]

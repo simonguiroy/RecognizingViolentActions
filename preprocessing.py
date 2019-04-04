@@ -67,7 +67,8 @@ def preprocess_video(file_path, stream, max_frames_per_clip=-1):
             sys.stdout.flush()
 
             if stream == 'flow':
-                # Computing optical flow frame
+                # Computing dense optical flow using TV-L1 algorithm (Zach et al., 2007)
+                # based on implementation of (Sanchez et al., 2011)
                 frame = dtvl1.calc(previous_frame, frame_resized, None)
                 # Clipping between -20 and 20, then rescaling between -1 and 1.
                 frame = np.divide(np.clip(frame, -20.0, 20.0), 20.0)
