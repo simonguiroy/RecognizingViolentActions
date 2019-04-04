@@ -8,8 +8,8 @@
 The dataset is a subset of the Kinetics dataset (include reference). Kinetics comprises a set of 400 general human action classes, each class having a total of 400 video samples in average, taken from YouTube videos. From this dataset, we created ViolentHumanActions_v2, comprising 20 classes, 9 of which are true violent actions, and the rest being non violent actions, but resembling violent ones. The non-violent actions were selected among the most frequent wrong predictions, when evaluating the model on the violent classes only.
 
 
-Violent Classes          | Non-Violent Classes
--------------- | :-----------------:
+Violent Classes | Non-Violent Classes
+----------------| :------------------:
 punching person | punching bag    
 side kick       | singing         
 high kick       | playing squash  
@@ -19,8 +19,8 @@ drop kick       | playing cricket
 sword fighting  | kissing         
 headbutting     | shaking head    
 capoeira        | headbanging     
-                | tai chi         
-                | tango dancing   
+.               | tai chi         
+.               | tango dancing   
 
 
 The dataset has a train, valid and test split, each respectively accounting for roughly 80%, 15% and 5% of the whole dataset.
